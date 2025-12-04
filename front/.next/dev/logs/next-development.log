@@ -1,0 +1,11 @@
+[00:00:00.743] Server  LOG      ✓ Ready in 506ms
+[00:00:14.463] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <index> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:01:31.607] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/index.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:31.626] Server  LOG      ✓ Compiled in 82ms
+[00:01:47.670] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/pages/index.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:47.719] Server  LOG      ✓ Compiled in 25ms
