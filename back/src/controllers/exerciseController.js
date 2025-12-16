@@ -1,16 +1,16 @@
 const exercisesDB = require("../mocks/exercisesDB");
-const { find } = require("../mocks/exercisesMethodMongoDB");
-const exercise = require("../models/Exercise");
 const exerciseModel = require("../models/Exercise");
 
 //GET ALL EXERCISES
 const getExercises = async (req, res) => {
   try {
     const allExercises = await exerciseModel.find();
-    const resExercise =allExercises.map(exercise =>{
+    const resExercise = allExercises.map((exercise) =>{
         return {
             id: exercise.id,
-            name: exercise.name
+            name: exercise.name,
+            muscle: exercise.muscle,
+            level: exercise.level,
         }
     })
     res.status(200).json({
@@ -65,6 +65,43 @@ const createExercise = async (req, res) => {
   }
 };
 
+const updateExercise = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { name, muscle, level } = req.body;
+    const updatedExercise = await exerciseModel.findByIdAndUpdate(
+      id,
+      { name, muscle, level },
+      { new: true } 
+    );
+
+    if (!updatedExercise) {
+      return res.status(404).json({
+        status: "failed",
+        data: null,
+        error: "El ejercicio no existe",
+      });
+    }
+
+    res.status(200).json({
+      status: "succeeded",
+      data: {
+        id: updatedExercise.id,
+        name: updatedExercise.name,
+        muscle: updatedExercise.muscle,
+        level: updatedExercise.level,
+      },
+      error: null,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: "failed",
+      data: null,
+      error: error.message,
+    });
+  }
+};
+
 const deleteExercise = async (req, res) => {
   try {
     const id = req.params.id;
@@ -75,44 +112,14 @@ const deleteExercise = async (req, res) => {
       error: null,
     });
   } catch (error) {
+    console.error(error);
     res
       .status(500)
       .json({ status: "failed", data: null, error: error.message });
   }
 };
 
-const updateExercise = async (req, res) => {
-  try {
-    const id = req.params.id
-    const {name, muscle, level} = req.body
 
-    const exerciseAux = await exerciseModel.findById(id);
-   
-    if(!exerciseAux) res.status(404).send('The exercise doesn´t exist')
-
-    if(name) {
-        exerciseAux.name = name
-    }    
-    if(muscle) {
-        exerciseAux.muscle = muscle
-    }
-    if(level) {
-        exerciseAux.level = level
-    }
-
-    await exerciseAux.save()
-
-    res.status(200).json({
-      status: "succeded",
-      data: null,
-      error: null,
-    });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ status: "failed", data: null, error: error.message });
-  }
-};
 
 //Load initial data
 const loadData = async (req, res) => {
@@ -133,9 +140,9 @@ const loadData = async (req, res) => {
 
 module.exports = {
   getExercises,
- getExerciseById,
+  getExerciseById,
   createExercise,
-  deleteExercise,
   updateExercise,
+  deleteExercise,
   loadData,
 };

@@ -4,11 +4,19 @@ module.exports = [
 
 __turbopack_context__.s([
     "getAllExcercises",
-    ()=>getAllExcercises
+    ()=>getAllExcercises,
+    "getExercise",
+    ()=>getExercise
 ]);
 const getAllExcercises = async ()=>{
     //Peticion al back
     const response = await fetch('http://localhost:9000/exercises');
+    const exercises = await response.json();
+    return exercises;
+};
+const getExercise = async (id)=>{
+    //Peticion al back
+    const response = await fetch('http://localhost:9000/exercises/' + id);
     const exercises = await response.json();
     return exercises;
 };
@@ -31,7 +39,7 @@ function index() {
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const getAllExcercisesAux = async ()=>{
             const exercisesAux = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$api$2f$exerciseFetch$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["getAllExcercises"])();
-            setExercises(exercisesAux.exercises);
+            setExercises(exercisesAux.data);
         };
         getAllExcercisesAux();
     }, []);

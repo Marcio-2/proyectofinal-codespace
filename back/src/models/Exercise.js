@@ -5,6 +5,7 @@ const exerciseSchema = new Schema({
     name: {
         type: String,
         required: true,
+        unique: true
     },
     muscle: {
         type: String,

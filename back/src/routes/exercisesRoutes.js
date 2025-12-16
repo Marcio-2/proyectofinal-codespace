@@ -3,9 +3,9 @@ const { getExercises,getExerciseById,createExercise,updateExercise,deleteExercis
 const exercisesRouter = require('express').Router()
 
 exercisesRouter.get('/', getExercises)
+exercisesRouter.post('/', createExercise)
 // exercisesRouter.get('/loadData', loadData)
 exercisesRouter.get('/:id', getExerciseById)
-exercisesRouter.post('/', createExercise)
 exercisesRouter.put('/:id', updateExercise)
 exercisesRouter.delete('/:id', deleteExercise)
 

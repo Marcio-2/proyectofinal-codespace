@@ -1,11 +1,13 @@
 const exercisesDB = require("./exercisesDB");
 
-
 const find = (id) => {
+  console.log(id);
+
   if (!id) {
+    console.log(exercisesDB);
     return exercisesDB;
   } else {
-    const exercise = exercisesDB.find((e) => e.id == id);
+    const exercise = exercisesDB.find(e => e.id == id);
     return exercise;
   }
 };
