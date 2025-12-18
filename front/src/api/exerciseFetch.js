@@ -1,4 +1,4 @@
-export const getAllExcercises = async () => {
+export const getAllExercises = async () => {
     //Peticion al back
     const response = await fetch('http://localhost:9000/exercises')
     const exercises = await response.json()

@@ -1,11 +1,508 @@
-[00:00:00.808] Server  LOG      ✓ Ready in 558ms
-[00:00:03.768] Server  ERROR    ⨯ Error: Expected the root reducer to be a function. Instead, received: 'object'
-[00:00:03.828] Server  ERROR    ⨯ Error: Expected the root reducer to be a function. Instead, received: 'object'
-[00:00:04.069] Browser ERROR   uncaughtError: Error: Expected the root reducer to be a function. Instead, received: 'object'
-[00:03:25.957] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:25.961] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:25.961] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/core/redux/reducer/index.jsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:03:25.961] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:25.981] Server  LOG      ✓ Compiled in 57ms
-[00:03:26.012] Server  ERROR   Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers.
-[00:03:26.210] Browser ERROR   Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers.
+[00:00:00.775] Server  LOG      ✓ Ready in 528ms
+[00:00:15.788] Browser LOG     store iniciada
+[00:00:20.586] Browser LOG     store iniciada
+[00:03:31.620] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.622] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.624] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.625] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.626] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.628] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.628] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.629] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.630] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.630] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.631] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.631] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.633] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.634] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.634] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.634] Server  ERROR    ⨯ ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:31.646] Server  LOG      ✓ Compiled in 83ms
+[00:03:31.930] Browser ERROR   ./src/components/MainMenu/MainMenuComponent.jsx:37:1
+Module not found: Can't resolve 'framer-motion'
+  35 |
+  36 | import { Link } from "react-router-dom";
+> 37 | import { motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  38 |
+  39 | export default function MainMenuComponent() {
+  40 |   return (
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:31.930] Browser ERROR   ./src/components/MainMenu/MainMenuComponent.jsx:36:1
+Module not found: Can't resolve 'react-router-dom'
+  34 |
+  35 |
+> 36 | import { Link } from "react-router-dom";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  37 | import { motion } from "framer-motion";
+  38 |
+  39 | export default function MainMenuComponent() {
+
+Import traces:
+  Browser:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+  SSR:
+    ./src/components/MainMenu/MainMenuComponent.jsx
+    ./src/pages/index.js
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:42.230] Server  LOG      ✓ Compiled in 24ms
+[00:09:49.396] Server  LOG      ✓ Compiled in 59ms
+[00:12:36.889] Server  LOG      ✓ Compiled in 24ms
+[00:14:37.676] Server  LOG      ✓ Compiled in 20ms
+[00:15:52.291] Server  LOG      ✓ Compiled in 7ms
+[00:18:57.882] Server  LOG      ✓ Compiled in 22ms
+[00:20:22.873] Server  LOG      ✓ Compiled in 93ms
+[00:20:56.922] Server  LOG      ✓ Compiled in 6ms
+[00:21:27.673] Server  LOG      ✓ Compiled in 4ms
+[00:21:36.401] Server  LOG      ✓ Compiled in 4ms
+[00:22:32.255] Server  LOG      ✓ Compiled in 18ms
+[00:23:02.867] Server  LOG      ✓ Compiled in 30ms
+[00:23:09.646] Server  LOG      ✓ Compiled in 11ms
+[00:24:04.669] Server  LOG      ✓ Compiled in 21ms
+[00:24:37.908] Server  LOG      ✓ Compiled in 9ms
+[00:25:37.077] Server  LOG      ✓ Compiled in 13ms
+[00:25:57.591] Server  LOG      ✓ Compiled in 3ms
+[00:26:08.533] Server  LOG      ✓ Compiled in 5ms
+[00:26:14.694] Server  LOG      ✓ Compiled in 3ms
+[00:26:17.914] Server  LOG      ✓ Compiled in 7ms
+[00:26:40.055] Browser LOG     store iniciada
+[00:27:29.215] Server  LOG      ✓ Compiled in 12ms
+[00:28:07.333] Server  LOG      ✓ Compiled in 6ms
+[00:29:15.727] Server  LOG      ✓ Compiled in 12ms
+[00:30:48.106] Server  LOG      ✓ Compiled in 20ms
+[00:31:58.128] Server  LOG      ✓ Compiled in 15ms
+[00:33:00.852] Server  LOG      ✓ Compiled in 12ms
+[00:33:08.810] Server  LOG      ✓ Compiled in 4ms
+[00:33:12.108] Server  LOG      ✓ Compiled in 4ms
+[00:33:20.563] Server  LOG      ✓ Compiled in 4ms
+[00:33:23.115] Server  LOG      ✓ Compiled in 4ms
+[00:33:25.749] Server  LOG      ✓ Compiled in 5ms
+[00:33:28.002] Server  LOG      ✓ Compiled in 3ms
+[00:33:30.328] Server  LOG      ✓ Compiled in 5ms
+[00:33:32.339] Server  LOG      ✓ Compiled in 5ms
+[00:33:34.262] Server  LOG      ✓ Compiled in 4ms
+[00:33:37.873] Server  LOG      ✓ Compiled in 2ms
+[00:35:48.712] Server  LOG      ✓ Compiled in 12ms
+[00:35:54.065] Server  LOG      ✓ Compiled in 5ms
+[00:35:57.509] Server  LOG      ✓ Compiled in 5ms
+[00:36:04.889] Server  LOG      ✓ Compiled in 5ms
+[00:36:13.410] Server  LOG      ✓ Compiled in 4ms
+[00:36:16.103] Server  LOG      ✓ Compiled in 3ms
+[00:36:27.654] Server  LOG      ✓ Compiled in 5ms
+[00:36:40.638] Server  LOG      ✓ Compiled in 5ms
+[00:37:26.855] Server  LOG      ✓ Compiled in 38ms
+[00:38:14.546] Server  LOG      ✓ Compiled in 23ms
+[00:38:42.363] Server  LOG      ✓ Compiled in 4ms
+[00:38:46.491] Server  LOG      ✓ Compiled in 10ms
+[00:40:22.018] Server  LOG      ✓ Compiled in 16ms
+[00:41:48.703] Server  LOG      ✓ Compiled in 18ms
+[00:42:11.719] Server  LOG      ✓ Compiled in 3ms
+[00:42:18.463] Server  LOG      ✓ Compiled in 6ms
+[00:43:04.305] Server  LOG      ✓ Compiled in 11ms
+[00:43:15.379] Server  LOG      ✓ Compiled in 4ms
+[00:43:27.365] Server  LOG      ✓ Compiled in 6ms
+[00:53:54.077] Server  LOG      ✓ Compiled in 67ms
+[00:53:58.774] Server  LOG      ✓ Compiled in 52ms
+[00:54:07.909] Server  LOG      ✓ Compiled in 6ms
+[00:54:17.190] Server  LOG      ✓ Compiled in 6ms
+[01:05:10.009] Server  LOG      ✓ Compiled in 49ms
+[01:07:00.888] Server  LOG      ✓ Compiled in 40ms
+[01:07:23.181] Server  LOG      ✓ Compiled in 5ms
+[01:07:38.852] Server  LOG      ✓ Compiled in 5ms
+[01:07:52.475] Server  LOG      ✓ Compiled in 16ms
+[01:08:07.806] Server  LOG      ✓ Compiled in 4ms
+[01:08:17.467] Server  LOG      ✓ Compiled in 3ms
+[01:08:25.386] Server  LOG      ✓ Compiled in 4ms
+[01:08:30.243] Server  LOG      ✓ Compiled in 2ms
+[01:08:39.994] Server  LOG      ✓ Compiled in 2ms
+[01:08:50.645] Server  LOG      ✓ Compiled in 4ms
+[01:08:59.394] Server  LOG      ✓ Compiled in 4ms
+[01:09:14.812] Server  LOG      ✓ Compiled in 4ms
+[01:10:29.919] Server  LOG      ✓ Compiled in 30ms
+[01:10:36.641] Server  LOG      ✓ Compiled in 7ms
+[01:10:43.200] Server  LOG      ✓ Compiled in 5ms
+[01:12:59.847] Server  LOG      ✓ Compiled in 7ms
+[01:13:12.947] Server  LOG      ✓ Compiled in 5ms
+[01:13:30.946] Server  LOG      ✓ Compiled in 4ms
+[01:14:36.275] Browser LOG     store iniciada

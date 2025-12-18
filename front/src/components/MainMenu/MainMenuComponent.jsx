@@ -1,0 +1,32 @@
+import React from "react";
+import styles from "./MainMenuComponent.module.css";
+
+export default function MainMenuComponent({ onSelectView }) {
+  return (
+    <div className={styles.mainMenuContainer}>
+      {/* Menu lateral */}
+    <nav className={styles.horizontalMenu}>
+     <button onClick={() => onSelectView("contact")} className={styles.menuItem}>
+      <img src="/icons/fitness.svg" alt="Principal" className={styles.menuIcon} />
+     </button>
+     <button onClick={() => onSelectView("warmup")} className={styles.menuItem}>
+      <span>Warm up</span>
+     </button>
+     <button onClick={() => onSelectView("list")} className={styles.menuItem}>
+      <span>Exercises</span>
+     </button>
+     <button onClick={() => onSelectView("create")} className={styles.menuItem}>
+      <span>Create routine</span>
+     </button>
+     <button onClick={() => onSelectView("routinestop")} className={styles.menuItem}>
+      <span>Top routines</span>
+     </button>
+    </nav>
+      {/* Company name */}
+      <div className={styles.titleCompany}>
+        <h1>MF</h1>
+        <h2>Learn to train</h2>
+      </div>
+    </div>
+  );
+}

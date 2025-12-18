@@ -1,91 +1,99 @@
-import React, { useEffect, useState } from "react";
-import { getAllExcercises } from "../api/exerciseFetch";
-import ExerciseDetailsComponent from "@/components/ExerciseDetails/ExerciseDetailsComponent";
-import CreateExerciseDetailsComponentFormik from "@/components/ExerciseDetails/CreateExerciseDetailsComponentFormik";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchExercisesSuccess } from "@/components/ExerciseList/ExerciseListActions";
+import { setSelectedExercise } from "@/components/ExerciseDetails/ExerciseDetailsActions";
 
-export default function index() {
-  const [exercises, setExercises] = useState([]);
-  const [exerciseId, setExerciseId] = useState(null);
-  const [exerciseHasChanged, setExerciseHasChanged] = useState(false);
-  const [isCreating, setIsCreating] = useState(false)
+import MainMenuComponent from "../components/MainMenu/MainMenuComponent";
+import ExerciseListComponent from "../components/ExerciseList/ExerciseListComponent";
+import ExerciseDetailsComponent from "../components/ExerciseDetails/ExerciseDetailsComponent";
+import ContactForm from "../components/ContactForm";
+import BackButton from "../components/BackButton";
 
-  const getAllExcercisesAux = async () => {
-    const exercisesAux = await getAllExcercises();
-    setExercises(exercisesAux.data);
+import { getAllExercises } from "../api/exerciseFetch";
+
+export default function App() {
+  const [view, setView] = useState(""); // "", "list", "detail", "create", "contact"
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const dispatch = useDispatch();
+  const exercises = useSelector((state) => state.exerciseList.exercises);
+  const selectedExercise = useSelector((state) => state.exerciseDetails.selectedExercise);
+
+  // -------------------- Cargar ejercicios --------------------
+  const loadExercises = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await getAllExercises();
+      const exercisesArray = Array.isArray(res)
+        ? res
+        : Array.isArray(res.data)
+        ? res.data
+        : [];
+      dispatch(fetchExercisesSuccess(exercisesArray));
+    } catch (err) {
+      console.error(err);
+      setError("No se pudieron cargar los ejercicios");
+      dispatch(fetchExercisesSuccess([]));
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    getAllExcercisesAux();
-  }, []);
+    if (view === "list") loadExercises();
+  }, [view]);
 
-    useEffect(() => {
-    getAllExcercisesAux()
-    setExerciseHasChanged(false)
-    closeExerciseDetails()
-  }, [exerciseHasChanged]);
-
-  const handlerOnClick = (id) => {
-    setExerciseId(id);
+  // -------------------- Handlers --------------------
+  const handleShowDetail = (exercise) => {
+    dispatch(setSelectedExercise(exercise));
+    setView("detail");
   };
 
-  const closeExerciseDetails = () => {
-    setExerciseId(null);
-  }
+  const handleBackToMenu = () => {
+    dispatch(setSelectedExercise(null));
+    setView("");
+  };
 
-  const handlerCreateExercise = () => {
-    setIsCreating(true)
-  }
+  const handleCreate = () => {
+    dispatch(setSelectedExercise(null));
+    setView("create");
+  };
 
-  const closeExerciseCreation =() => {
-    setIsCreating(false)
-  }
-
+  // -------------------- Render --------------------
   return (
-    <>
-      <h1>Exercises</h1>
+    <div>
+      {/* Menú principal con fondo y títulos */}
+      {view === "" && <MainMenuComponent onSelectView={setView} />}
 
-      <div>
-        {
-          !isCreating 
-          ?
-          <button onClick={handlerCreateExercise}>Create Exercise</button>
-          :
-          <CreateExerciseDetailsComponentFormik setExerciseHasChanged={setExerciseHasChanged} 
-          exerciseHasChanged={exerciseHasChanged}
-          closeExerciseCreation={closeExerciseCreation}
+      {/* Lista de ejercicios */}
+      {view === "list" && (
+        <div>
+          <button onClick={handleCreate} style={{ marginBottom: "15px" }}>Create New Exercise</button>
+          <ExerciseListComponent
+            exercises={exercises}
+            loading={loading}
+            error={error}
+            handleShowDetail={handleShowDetail}
           />
-        }
-        
-      </div>
-      <br/>
+          <BackButton onClick={handleBackToMenu} />
+        </div>
+      )}
 
-      {
-      exercises && exercises.map((exercise, index) => {
-          return (
-            <div key={index}>
-              <span>{exercise.id} | </span>
-              <span>{exercise.name} | </span>
-              <span>
-                <button
-                  onClick={() => {
-                    handlerOnClick(exercise.id);
-                  }}
-                >
-                  Ver Ejercicio
-                </button>
-              </span>
-            </div>
-          );
-        })}
-      <hr />
-      {exerciseId && (
+      {/* Detalle / Create */}
+      {(view === "detail" || view === "create") && (
         <ExerciseDetailsComponent
-          id={exerciseId}
-          closeExerciseDetails={closeExerciseDetails}
-          setExerciseHasChanged={setExerciseHasChanged}
-          exerciseHasChanged={exerciseHasChanged}
+          exercise={selectedExercise}
+          onBack={handleBackToMenu}
+          onReload={loadExercises}
         />
       )}
-    </>
+
+      {/* Contact */}
+      {view === "contact" && (
+        <ContactForm onBack={handleBackToMenu} />
+      )}
+    </div>
   );
 }
