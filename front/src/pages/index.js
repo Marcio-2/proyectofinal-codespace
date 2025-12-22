@@ -6,7 +6,8 @@ import { setSelectedExercise } from "@/components/ExerciseDetails/ExerciseDetail
 import MainMenuComponent from "../components/MainMenu/MainMenuComponent";
 import ExerciseListComponent from "../components/ExerciseList/ExerciseListComponent";
 import ExerciseDetailsComponent from "../components/ExerciseDetails/ExerciseDetailsComponent";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/Contact/ContactForm";
+import WarmUpComponent from "../components/WarmUp/WarmUpComponent";
 import BackButton from "../components/BackButton";
 
 import { getAllExercises } from "../api/exerciseFetch";
@@ -18,7 +19,9 @@ export default function App() {
 
   const dispatch = useDispatch();
   const exercises = useSelector((state) => state.exerciseList.exercises);
-  const selectedExercise = useSelector((state) => state.exerciseDetails.selectedExercise);
+  const selectedExercise = useSelector(
+    (state) => state.exerciseDetails.selectedExercise
+  );
 
   // -------------------- Cargar ejercicios --------------------
   const loadExercises = async () => {
@@ -67,10 +70,18 @@ export default function App() {
       {/* Menú principal con fondo y títulos */}
       {view === "" && <MainMenuComponent onSelectView={setView} />}
 
+       {/* Contact */}
+      {view === "contact" && <ContactForm onBack={handleBackToMenu} />}
+
+       {/* Warm-up */}
+      {view === "warmup" && <WarmUpComponent onBack={handleBackToMenu} />}
+
       {/* Lista de ejercicios */}
       {view === "list" && (
         <div>
-          <button onClick={handleCreate} style={{ marginBottom: "15px" }}>Create New Exercise</button>
+          <button onClick={handleCreate} style={{ marginBottom: "15px" }}>
+            Create New Exercise
+          </button>
           <ExerciseListComponent
             exercises={exercises}
             loading={loading}
@@ -88,11 +99,6 @@ export default function App() {
           onBack={handleBackToMenu}
           onReload={loadExercises}
         />
-      )}
-
-      {/* Contact */}
-      {view === "contact" && (
-        <ContactForm onBack={handleBackToMenu} />
       )}
     </div>
   );

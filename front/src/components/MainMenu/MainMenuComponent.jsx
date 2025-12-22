@@ -25,7 +25,7 @@ export default function MainMenuComponent({ onSelectView }) {
       {/* Company name */}
       <div className={styles.titleCompany}>
         <h1>MF</h1>
-        <h2>Learn to train</h2>
+        <h2>LEARN TO TRAIN</h2>
       </div>
     </div>
   );
