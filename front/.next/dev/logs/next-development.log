@@ -1,104 +1,55 @@
-[00:00:01.601] Server  LOG      ✓ Ready in 1343ms
-[00:00:13.016] Browser LOG     store iniciada
-[00:00:59.351] Browser LOG     store iniciada
-[00:03:04.033] Server  LOG      ✓ Compiled in 67ms
-[00:03:38.485] Server  LOG      ✓ Compiled in 74ms
-[00:05:34.595] Server  LOG      ✓ Compiled in 35ms
-[00:05:42.638] Server  LOG      ✓ Compiled in 61ms
-[00:07:09.606] Server  LOG      ✓ Compiled in 24ms
-[00:07:12.050] Server  LOG      ✓ Compiled in 21ms
-[00:08:39.343] Server  LOG      ✓ Compiled in 18ms
-[00:08:55.097] Server  LOG      ✓ Compiled in 6ms
-[00:08:59.544] Server  LOG      ✓ Compiled in 4ms
-[00:09:02.253] Server  LOG      ✓ Compiled in 7ms
-[00:09:14.899] Server  LOG      ✓ Compiled in 6ms
-[00:09:17.860] Server  LOG      ✓ Compiled in 6ms
-[00:09:41.710] Server  LOG      ✓ Compiled in 5ms
-[00:10:00.815] Server  LOG      ✓ Compiled in 16ms
-[00:11:11.053] Server  LOG      ✓ Compiled in 23ms
-[00:11:17.229] Server  LOG      ✓ Compiled in 6ms
-[00:11:25.065] Server  LOG      ✓ Compiled in 5ms
-[00:11:30.457] Server  LOG      ✓ Compiled in 5ms
-[00:11:35.975] Server  LOG      ✓ Compiled in 13ms
-[00:11:41.397] Server  LOG      ✓ Compiled in 6ms
-[00:11:54.371] Server  LOG      ✓ Compiled in 5ms
-[00:11:58.475] Server  LOG      ✓ Compiled in 6ms
-[00:12:14.782] Server  LOG      ✓ Compiled in 39ms
-[00:12:28.909] Server  LOG      ✓ Compiled in 15ms
-[00:12:34.557] Server  LOG      ✓ Compiled in 15ms
-[00:13:29.985] Server  LOG      ✓ Compiled in 47ms
-[00:13:44.612] Server  LOG      ✓ Compiled in 4ms
-[00:13:51.322] Server  LOG      ✓ Compiled in 5ms
-[00:13:58.089] Server  LOG      ✓ Compiled in 2ms
-[00:14:31.320] Server  LOG      ✓ Compiled in 6ms
-[00:14:41.000] Server  LOG      ✓ Compiled in 5ms
-[00:14:58.114] Server  LOG      ✓ Compiled in 13ms
-[00:15:09.982] Server  LOG      ✓ Compiled in 6ms
-[00:15:21.568] Server  LOG      ✓ Compiled in 6ms
-[00:15:30.858] Server  LOG      ✓ Compiled in 6ms
-[00:16:49.267] Server  LOG      ✓ Compiled in 21ms
-[00:17:52.837] Server  LOG      ✓ Compiled in 8ms
-[00:19:50.957] Server  LOG      ✓ Compiled in 23ms
-[00:20:24.369] Server  LOG      ✓ Compiled in 4ms
-[00:21:32.697] Server  LOG      ✓ Compiled in 15ms
-[00:21:35.300] Server  LOG      ✓ Compiled in 6ms
-[00:24:09.811] Server  LOG      ✓ Compiled in 21ms
-[00:25:08.654] Server  LOG      ✓ Compiled in 23ms
-[00:25:35.399] Server  LOG      ✓ Compiled in 22ms
-[00:26:06.772] Server  LOG      ✓ Compiled in 6ms
-[00:26:18.372] Server  LOG      ✓ Compiled in 5ms
-[00:26:49.053] Server  LOG      ✓ Compiled in 15ms
-[00:26:52.327] Server  LOG      ✓ Compiled in 5ms
-[00:27:23.340] Server  LOG      ✓ Compiled in 6ms
-[00:27:44.697] Server  LOG      ✓ Compiled in 5ms
-[00:27:50.077] Server  LOG      ✓ Compiled in 5ms
-[00:27:52.571] Server  LOG      ✓ Compiled in 6ms
-[00:27:55.991] Server  LOG      ✓ Compiled in 5ms
-[00:27:57.796] Server  LOG      ✓ Compiled in 6ms
-[00:28:01.227] Server  LOG      ✓ Compiled in 3ms
-[00:28:22.422] Server  LOG      ✓ Compiled in 6ms
-[00:28:31.097] Server  LOG      ✓ Compiled in 5ms
-[00:28:37.454] Server  LOG      ✓ Compiled in 5ms
-[00:30:08.313] Server  LOG      ✓ Compiled in 22ms
-[00:30:42.659] Server  LOG      ✓ Compiled in 17ms
-[00:30:58.990] Server  LOG      ✓ Compiled in 6ms
-[00:32:43.012] Server  LOG      ✓ Compiled in 15ms
-[00:33:29.102] Server  LOG      ✓ Compiled in 22ms
-[00:35:25.764] Server  LOG      ✓ Compiled in 16ms
-[00:35:28.537] Server  LOG      ✓ Compiled in 4ms
-[00:35:40.532] Server  LOG      ✓ Compiled in 6ms
-[00:35:43.158] Server  LOG      ✓ Compiled in 6ms
-[00:35:57.357] Server  LOG      ✓ Compiled in 5ms
-[00:36:04.670] Server  LOG      ✓ Compiled in 4ms
-[00:36:10.244] Server  LOG      ✓ Compiled in 4ms
-[00:36:32.195] Server  LOG      ✓ Compiled in 5ms
-[00:38:40.481] Server  LOG      ✓ Compiled in 18ms
-[00:38:43.473] Server  LOG      ✓ Compiled in 5ms
-[00:38:52.906] Browser LOG     store iniciada
-[00:39:29.449] Server  LOG      ✓ Compiled in 18ms
-[00:39:36.917] Browser LOG     store iniciada
-[00:40:05.145] Server  LOG      ✓ Compiled in 8ms
-[00:40:10.577] Server  LOG      ✓ Compiled in 8ms
-[00:40:21.455] Server  LOG      ✓ Compiled in 5ms
-[00:41:18.695] Server  LOG      ✓ Compiled in 19ms
-[00:42:33.672] Server  LOG      ✓ Compiled in 13ms
-[00:42:45.186] Server  LOG      ✓ Compiled in 9ms
-[00:42:50.488] Server  LOG      ✓ Compiled in 13ms
-[00:43:00.742] Server  LOG      ✓ Compiled in 7ms
-[00:44:18.961] Browser LOG     store iniciada
-[00:45:03.822] Server  LOG      ✓ Compiled in 55ms
-[00:45:15.865] Server  LOG      ✓ Compiled in 7ms
-[00:45:42.904] Server  LOG      ✓ Compiled in 20ms
-[00:46:25.810] Server  LOG      ✓ Compiled in 13ms
-[00:47:40.576] Server  LOG      ✓ Compiled in 16ms
-[00:49:05.175] Server  LOG      ✓ Compiled in 16ms
-[00:49:15.505] Server  LOG      ✓ Compiled in 5ms
-[00:49:20.451] Server  LOG      ✓ Compiled in 6ms
-[00:49:33.900] Server  LOG      ✓ Compiled in 6ms
-[00:50:16.208] Server  LOG      ✓ Compiled in 15ms
-[00:50:35.608] Server  LOG      ✓ Compiled in 5ms
-[00:51:01.614] Server  LOG      ✓ Compiled in 7ms
-[00:51:04.390] Server  LOG      ✓ Compiled in 6ms
-[00:51:09.963] Server  LOG      ✓ Compiled in 7ms
-[00:52:21.003] Server  LOG      ✓ Compiled in 13ms
-[00:53:50.760] Server  LOG      ✓ Compiled in 79ms
+[00:00:02.201] Server  LOG      ✓ Ready in 1933ms
+[00:00:20.347] Browser LOG     store iniciada
+[00:00:24.845] Browser LOG     store iniciada
+[00:00:26.219] Browser LOG     store iniciada
+[00:00:29.330] Browser LOG     store iniciada
+[00:00:32.829] Browser LOG     store iniciada
+[00:01:21.701] Server  LOG      ✓ Compiled in 111ms
+[00:01:25.431] Browser LOG     store iniciada
+[00:04:45.575] Server  LOG      ✓ Compiled in 98ms
+[00:09:54.668] Server  LOG      ✓ Compiled in 112ms
+[00:12:18.206] Server  LOG      ✓ Compiled in 24ms
+[00:16:15.647] Server  LOG      ✓ Compiled in 26ms
+[00:17:56.551] Server  LOG      ✓ Compiled in 31ms
+[00:31:08.225] Server  LOG      ✓ Compiled in 118ms
+[00:31:25.422] Browser LOG     store iniciada
+[00:33:43.232] Server  LOG      ✓ Compiled in 63ms
+[00:33:49.241] Browser LOG     store iniciada
+[00:34:06.190] Browser LOG     store iniciada
+[00:34:21.924] Browser LOG     store iniciada
+[00:34:44.341] Browser LOG     store iniciada
+[00:56:42.295] Server  LOG      ✓ Compiled in 169ms
+[00:56:45.164] Browser LOG     store iniciada
+[00:56:45.164] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <ExerciseListComponent> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:57:16.604] Server  LOG      ✓ Compiled in 28ms
+[00:57:20.582] Browser LOG     store iniciada
+[00:58:29.002] Server  LOG      ✓ Compiled in 26ms
+[00:59:24.056] Server  LOG      ✓ Compiled in 111ms
+[00:59:32.008] Server  LOG      ✓ Compiled in 18ms
+[00:59:37.138] Server  LOG      ✓ Compiled in 8ms
+[00:59:47.444] Browser LOG     store iniciada
+[00:59:55.641] Browser LOG     store iniciada
+[00:59:57.188] Browser LOG     store iniciada
+[01:01:53.382] Server  LOG      ✓ Compiled in 27ms
+[01:01:59.094] Browser LOG     store iniciada
+[01:02:49.435] Server  LOG      ✓ Compiled in 62ms
+[01:02:49.507] Browser LOG     Refreshing page data due to server-side change
+[01:03:17.543] Server  LOG      ✓ Compiled in 9ms
+[01:03:19.577] Browser LOG     store iniciada
+[01:03:21.030] Browser LOG     store iniciada
+[01:07:33.113] Server  LOG      ✓ Compiled in 44ms
+[01:08:42.997] Server  LOG      ✓ Compiled in 19ms
+[01:08:45.217] Server  LOG      ✓ Compiled in 12ms
+[01:09:04.595] Server  LOG      ✓ Compiled in 10ms
+[01:09:07.988] Server  LOG      ✓ Compiled in 10ms
+[01:09:12.155] Browser LOG     store iniciada
+[01:11:53.254] Server  LOG      ✓ Compiled in 31ms
+[01:11:54.784] Server  LOG      ✓ Compiled in 9ms
+[01:12:16.994] Browser LOG     store iniciada
+[01:12:18.875] Browser LOG     store iniciada
+[01:12:22.671] Browser LOG     store iniciada

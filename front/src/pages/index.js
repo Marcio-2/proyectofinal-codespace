@@ -11,6 +11,7 @@ import WarmUpComponent from "../components/WarmUp/WarmUpComponent";
 import BackButton from "../components/BackButton";
 
 import { getAllExercises } from "../api/exerciseFetch";
+import RoutinesTopComponent from "@/components/RoutinesTop/RoutinesTopComponent";
 
 export default function App() {
   const [view, setView] = useState(""); // "", "list", "detail", "create", "contact"
@@ -79,16 +80,14 @@ export default function App() {
       {/* Lista de ejercicios */}
       {view === "list" && (
         <div>
-          <button onClick={handleCreate} style={{ marginBottom: "15px" }}>
-            Create New Exercise
-          </button>
           <ExerciseListComponent
             exercises={exercises}
             loading={loading}
             error={error}
             handleShowDetail={handleShowDetail}
+            onBack={handleBackToMenu}
           />
-          <BackButton onClick={handleBackToMenu} />
+          {/* <BackButton onClick={handleBackToMenu} /> */}
         </div>
       )}
 
@@ -100,6 +99,10 @@ export default function App() {
           onReload={loadExercises}
         />
       )}
+
+      {/* Routines-top */}
+      {view === "routinestop" && <RoutinesTopComponent onBack={handleBackToMenu} />}
+
     </div>
   );
 }
