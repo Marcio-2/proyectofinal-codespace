@@ -6,8 +6,9 @@ export default function MainMenuComponent({ onSelectView }) {
     <div className={styles.mainMenuContainer}>
       {/* Menu lateral */}
     <nav className={styles.horizontalMenu}>
+     <img src="/icons/fitness.svg" alt="Principal" className={styles.menuIcon} />
      <button onClick={() => onSelectView("contact")} className={styles.menuItem}>
-      <img src="/icons/fitness.svg" alt="Principal" className={styles.menuIcon} />
+      <span>What is MF?</span>
      </button>
      <button onClick={() => onSelectView("warmup")} className={styles.menuItem}>
       <span>Warm up</span>

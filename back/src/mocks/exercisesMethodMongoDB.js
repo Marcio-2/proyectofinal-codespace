@@ -1,24 +1,33 @@
 const exercisesDB = require("./exercisesDB");
 
 const find = (id) => {
-  console.log(id);
-
   if (!id) {
-    console.log(exercisesDB);
     return exercisesDB;
   } else {
-    const exercise = exercisesDB.find(e => e.id == id);
-    return exercise;
+    return exercisesDB.find((e) => e.id == id);
   }
 };
 
-const newExerciseModel = (id, name, muscle, level) => {
+const newExerciseModel = ({
+  id,
+  name,
+  muscle,
+  level,
+  description = "",
+  imageUrl = "",
+  videoUrl = "",
+  alternatives = [],
+}) => {
   exercisesDB.push({
     id,
     name,
     muscle,
     level,
+    description,
+    imageUrl,
+    videoUrl,
+    alternatives,
   });
 };
 
-module.exports = { find, newExerciseModel}
+module.exports = { find, newExerciseModel };

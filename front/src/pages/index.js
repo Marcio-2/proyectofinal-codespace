@@ -8,13 +8,12 @@ import ExerciseListComponent from "../components/ExerciseList/ExerciseListCompon
 import ExerciseDetailsComponent from "../components/ExerciseDetails/ExerciseDetailsComponent";
 import ContactForm from "../components/Contact/ContactForm";
 import WarmUpComponent from "../components/WarmUp/WarmUpComponent";
-import BackButton from "../components/BackButton";
-
-import { getAllExercises } from "../api/exerciseFetch";
 import RoutinesTopComponent from "@/components/RoutinesTop/RoutinesTopComponent";
 
+import { getAllExercises, getExercise } from "../api/exerciseFetch";
+
 export default function App() {
-  const [view, setView] = useState(""); // "", "list", "detail", "create", "contact"
+  const [view, setView] = useState(""); // "", "list", "detail", "contact", etc.
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -30,11 +29,7 @@ export default function App() {
     setError(null);
     try {
       const res = await getAllExercises();
-      const exercisesArray = Array.isArray(res)
-        ? res
-        : Array.isArray(res.data)
-        ? res.data
-        : [];
+      const exercisesArray = Array.isArray(res) ? res : Array.isArray(res.data) ? res.data : [];
       dispatch(fetchExercisesSuccess(exercisesArray));
     } catch (err) {
       console.error(err);
@@ -50,9 +45,14 @@ export default function App() {
   }, [view]);
 
   // -------------------- Handlers --------------------
-  const handleShowDetail = (exercise) => {
-    dispatch(setSelectedExercise(exercise));
-    setView("detail");
+  const handleShowDetail = async (id) => {
+    try {
+      const fullExercise = await getExercise(id); // fetch del ejercicio completo
+      dispatch(setSelectedExercise(fullExercise));
+      setView("detail"); // cambiar a vista detalle
+    } catch (err) {
+      console.error("Error cargando ejercicio:", err);
+    }
   };
 
   const handleBackToMenu = () => {
@@ -60,49 +60,50 @@ export default function App() {
     setView("");
   };
 
-  const handleCreate = () => {
+  const handleBackToList = () => {
     dispatch(setSelectedExercise(null));
-    setView("create");
+    setView("list");
   };
 
   // -------------------- Render --------------------
   return (
     <div>
-      {/* Menú principal con fondo y títulos */}
+      {/* Menú principal */}
       {view === "" && <MainMenuComponent onSelectView={setView} />}
 
-       {/* Contact */}
+      {/* Contact */}
       {view === "contact" && <ContactForm onBack={handleBackToMenu} />}
 
-       {/* Warm-up */}
+      {/* Warm-up */}
       {view === "warmup" && <WarmUpComponent onBack={handleBackToMenu} />}
 
       {/* Lista de ejercicios */}
       {view === "list" && (
-        <div>
-          <ExerciseListComponent
-            exercises={exercises}
-            loading={loading}
-            error={error}
-            handleShowDetail={handleShowDetail}
-            onBack={handleBackToMenu}
-          />
-          {/* <BackButton onClick={handleBackToMenu} /> */}
-        </div>
-      )}
-
-      {/* Detalle / Create */}
-      {(view === "detail" || view === "create") && (
-        <ExerciseDetailsComponent
-          exercise={selectedExercise}
+        <ExerciseListComponent
+          exercises={exercises}
+          loading={loading}
+          error={error}
+          handleShowDetail={handleShowDetail} // pasa solo el id
           onBack={handleBackToMenu}
-          onReload={loadExercises}
         />
       )}
 
-      {/* Routines-top */}
-      {view === "routinestop" && <RoutinesTopComponent onBack={handleBackToMenu} />}
+      {/* Detalle del ejercicio */}
+   {view === "detail" && selectedExercise && (
+  <>
+    {console.log("selectedExercise:", selectedExercise)}
+    <ExerciseDetailsComponent
+      exercise={selectedExercise}
+      onBack={handleBackToList}
+    />
+  </>
+)}
 
+
+      {/* Routines-top */}
+      {view === "routinestop" && (
+        <RoutinesTopComponent onBack={handleBackToMenu} />
+      )}
     </div>
   );
 }

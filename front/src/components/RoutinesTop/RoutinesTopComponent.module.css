@@ -1,7 +1,8 @@
 .background {
   width: 100%;
   min-height: 100vh;
-  background-color: #383838d6;
+  background-image: url("/images/wallpaper2.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   padding: 70px 35px;
@@ -56,7 +57,7 @@
 }
 
 .listLink {
-  margin: 12px 12px;
+  margin: 16px 12px;
 }
 
 .link {

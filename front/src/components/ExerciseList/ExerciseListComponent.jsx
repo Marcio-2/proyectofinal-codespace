@@ -22,17 +22,10 @@ export default function ExerciseListComponent({
               <h1 className={styles.title}>Exercises</h1>
               <div className={styles.line}></div>
             </div>
-
             <ul className={styles.list}>
               {exercises.map((exercise) => (
-                <li key={exercise.id} className={styles.listItem}>
-                  <span>{exercise.name}  </span>
-                  <button
-                    className={styles.detailButton}
-                    onClick={() => handleShowDetail(exercise)}
-                  >
-                    Ver Ejercicio
-                  </button>
+                <li className={styles.listItem}>
+                  <span className={styles.name} onClick={() => handleShowDetail(exercise.id)}>{exercise.name}</span>
                 </li>
               ))}
             </ul>

@@ -2,7 +2,7 @@ export const getAllExercises = async () => {
     //Peticion al back
     const response = await fetch('http://localhost:9000/exercises')
     const exercises = await response.json()
-    return exercises
+    return exercises.data
 }
 
 
@@ -10,8 +10,9 @@ export const getExercise = async (id) => {
     //Peticion al back
     const response = await fetch('http://localhost:9000/exercises/'+id)
     const exercises = await response.json()
-    return exercises
+    return exercises.data
 }
+
 
 export const deleteExercise = async (id) => {
    const response = await fetch('http://localhost:9000/exercises/' + id, {

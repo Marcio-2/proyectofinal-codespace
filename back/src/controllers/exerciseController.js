@@ -5,14 +5,14 @@ const exerciseModel = require("../models/Exercise");
 const getExercises = async (req, res) => {
   try {
     const allExercises = await exerciseModel.find();
-    const resExercise = allExercises.map((exercise) =>{
-        return {
-            id: exercise.id,
-            name: exercise.name,
-            muscle: exercise.muscle,
-            level: exercise.level,
-        }
-    })
+    const resExercise = allExercises.map((exercise) => {
+      return {
+        id: exercise.id,
+        name: exercise.name,
+        muscle: exercise.muscle,
+        level: exercise.level,
+      };
+    });
     res.status(200).json({
       status: "succeded",
       data: resExercise,
@@ -45,52 +45,44 @@ const getExerciseById = async (req, res) => {
 
 const createExercise = async (req, res) => {
   try {
-    const exerciseData = req.body;
-    const newExercise = await exerciseModel({
-      name: exerciseData.name,
-      muscle: exerciseData.muscle,
-      level: exerciseData.level,
-    });
+    const newExercise = new exerciseModel(req.body);
     await newExercise.save();
-    console.log(newExercise);
+
     res.status(200).json({
       status: "succeded",
       data: newExercise,
       error: null,
     });
   } catch (error) {
-    res
-      .status(500)
-      .json({ status: "failed", data: null, error: error.message });
+    res.status(500).json({
+      status: "failed",
+      data: null,
+      error: error.message,
+    });
   }
 };
 
 const updateExercise = async (req, res) => {
   try {
     const id = req.params.id;
-    const { name, muscle, level } = req.body;
+
     const updatedExercise = await exerciseModel.findByIdAndUpdate(
       id,
-      { name, muscle, level },
-      { new: true } 
+      req.body,
+      { new: true }
     );
 
     if (!updatedExercise) {
       return res.status(404).json({
         status: "failed",
         data: null,
-        error: "El ejercicio no existe",
+        error: "The exercise doesnt exist",
       });
     }
 
     res.status(200).json({
       status: "succeeded",
-      data: {
-        id: updatedExercise.id,
-        name: updatedExercise.name,
-        muscle: updatedExercise.muscle,
-        level: updatedExercise.level,
-      },
+      data: updatedExercise,
       error: null,
     });
   } catch (error) {
@@ -119,24 +111,40 @@ const deleteExercise = async (req, res) => {
   }
 };
 
-
-
 //Load initial data
 const loadData = async (req, res) => {
   try {
-    exercisesDB.map(async (exercise) => {
-      const newExercise = exerciseModel({
-        name: exercise.name,
-        muscle: exercise.muscle,
-        level: exercise.level,
-      });
-      await newExercise.save();
+    const upsertPromises = exercisesDB.map(async (exercise) => {
+      await exerciseModel.updateOne(
+        { name: exercise.name }, 
+        {
+          $set: {
+            muscle: exercise.muscle,
+            level: exercise.level,
+            description: exercise.description || "",
+            imageUrl: exercise.imageUrl || "",
+            videoUrl: exercise.videoUrl || "",
+            alternatives: (exercise.alternatives || []).map((alt) => ({
+              name: alt.name,
+              imageUrl: alt.imageUrl
+            }))
+          }
+        },
+        { upsert: true } // si no existe, crea uno nuevo
+      );
     });
-    res.sendStatus(200);
+
+    await Promise.all(upsertPromises);
+
+    console.log("✅ Exercises loaded successfully (upsert)!");
+    res.status(200).json({ status: "succeeded", data: exercisesDB, error: null });
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    res.status(500).json({ status: "failed", data: null, error: error.message });
   }
 };
+
+
 
 module.exports = {
   getExercises,
