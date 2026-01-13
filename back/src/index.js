@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const exercisesRouter = require('./routes/exercisesRoutes');
+const routinesRouter = require('./routes/routinesRoutes');
 
 const app = express();
 const port = 9000;
@@ -31,6 +32,7 @@ app.use(cors());
 
 
 app.use('/exercises', exercisesRouter);
+app.use("/routines", routinesRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

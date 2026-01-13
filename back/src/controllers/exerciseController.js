@@ -11,6 +11,9 @@ const getExercises = async (req, res) => {
         name: exercise.name,
         muscle: exercise.muscle,
         level: exercise.level,
+        description: exercise.description,
+        videoUrl: exercise.videoUrl,
+        alternatives: exercise.alternatives || [],
       };
     });
     res.status(200).json({
@@ -116,7 +119,7 @@ const loadData = async (req, res) => {
   try {
     const upsertPromises = exercisesDB.map(async (exercise) => {
       await exerciseModel.updateOne(
-        { name: exercise.name }, 
+        { name: exercise.name },
         {
           $set: {
             muscle: exercise.muscle,
@@ -126,9 +129,9 @@ const loadData = async (req, res) => {
             videoUrl: exercise.videoUrl || "",
             alternatives: (exercise.alternatives || []).map((alt) => ({
               name: alt.name,
-              imageUrl: alt.imageUrl
-            }))
-          }
+              imageUrl: alt.imageUrl,
+            })),
+          },
         },
         { upsert: true } // si no existe, crea uno nuevo
       );
@@ -137,14 +140,16 @@ const loadData = async (req, res) => {
     await Promise.all(upsertPromises);
 
     console.log("✅ Exercises loaded successfully (upsert)!");
-    res.status(200).json({ status: "succeeded", data: exercisesDB, error: null });
+    res
+      .status(200)
+      .json({ status: "succeeded", data: exercisesDB, error: null });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ status: "failed", data: null, error: error.message });
+    res
+      .status(500)
+      .json({ status: "failed", data: null, error: error.message });
   }
 };
-
-
 
 module.exports = {
   getExercises,

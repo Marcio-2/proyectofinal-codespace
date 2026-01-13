@@ -11,6 +11,7 @@ import WarmUpComponent from "../components/WarmUp/WarmUpComponent";
 import RoutinesTopComponent from "@/components/RoutinesTop/RoutinesTopComponent";
 
 import { getAllExercises, getExercise } from "../api/exerciseFetch";
+import CreateRoutine from "@/components/CreateRoutine/CreateRoutine";
 
 export default function App() {
   const [view, setView] = useState(""); // "", "list", "detail", "contact", etc.
@@ -29,7 +30,11 @@ export default function App() {
     setError(null);
     try {
       const res = await getAllExercises();
-      const exercisesArray = Array.isArray(res) ? res : Array.isArray(res.data) ? res.data : [];
+      const exercisesArray = Array.isArray(res)
+        ? res
+        : Array.isArray(res.data)
+        ? res.data
+        : [];
       dispatch(fetchExercisesSuccess(exercisesArray));
     } catch (err) {
       console.error(err);
@@ -89,16 +94,24 @@ export default function App() {
       )}
 
       {/* Detalle del ejercicio */}
-   {view === "detail" && selectedExercise && (
-  <>
-    {console.log("selectedExercise:", selectedExercise)}
-    <ExerciseDetailsComponent
-      exercise={selectedExercise}
-      onBack={handleBackToList}
-    />
-  </>
-)}
+      {view === "detail" && selectedExercise && (
+        <>
+          {console.log("selectedExercise:", selectedExercise)}
+          <ExerciseDetailsComponent
+            exercise={selectedExercise}
+            onBack={handleBackToList}
+          />
+        </>
+      )}
 
+      {/* Create routine */}
+      {view === "create" &&  (
+        <CreateRoutine
+        exercises={exercises}
+        error={error}
+        onBack={handleBackToMenu}
+        />
+      )}
 
       {/* Routines-top */}
       {view === "routinestop" && (
