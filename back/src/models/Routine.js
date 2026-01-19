@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Sub-schema para ejercicios dentro de la rutina
 const routineExerciseSchema = new Schema({
   name: {
     type: String,
@@ -15,13 +14,12 @@ const routineExerciseSchema = new Schema({
     type: String,
     required: true,
   },
-  // Podrías añadir aquí otros campos si quieres, ejemplo:
   sets: { type: Number, default: 3 },
   reps: { type: Number, default: 10 },
-  rest: { type: Number, default: 60 }, // segundos de descanso
+  rest: { type: Number, default: 60 }, 
 });
 
-// Schema principal de la rutina
+
 const routineSchema = new Schema(
   {
     name: {
@@ -29,8 +27,8 @@ const routineSchema = new Schema(
       required: true,
       unique: true,
     },
-    exercises: [routineExerciseSchema], // array de ejercicios
-    difficulty: { type: String, enum: ["easy","medium","hard"], default: "medium" },
+    exercises: [routineExerciseSchema], 
+    difficulty: { type: String, enum: ["Easy","Medium","Hard"], default: "Medium" },
   },
   { timestamps: true }
 );

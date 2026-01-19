@@ -1,5 +1,5 @@
 export function evaluateRoutine(exercises) {
-  if (!exercises || exercises.length === 0) return { rating: "bad", score: 0, reasons: ["There are no exercises"] };
+  if (!exercises || exercises.length === 0) return { rating: "bad",difficulty: "Easy", score: 0, reasons: ["There are no exercises"] };
 
   let score = 0;
   let reasons = [];
@@ -42,5 +42,11 @@ export function evaluateRoutine(exercises) {
   else if (score <= 7) rating = "medium";
   else rating = "good";
 
-  return { rating, score, reasons };
+  //dificultad segun rating
+  let difficulty = "Medium";
+  if (rating === "bad") difficulty = "Easy";
+  if (rating === "good") difficulty = "Hard";
+
+
+  return { rating, difficulty ,score, reasons };
 }

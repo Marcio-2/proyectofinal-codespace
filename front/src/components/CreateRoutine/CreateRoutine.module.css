@@ -64,10 +64,27 @@
   align-self: center;
 }
 
+.inputError {
+  border: 2px solid #9d372c;
+  background-color: rgba(157, 55, 44, 0.15);
+}
+
+.menuButton {
+  margin-top: 20px;
+  padding: 5px 14px;
+  background-color: #f1eeeb;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
 .evaluateButton,
 .back {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 7px 17px;
   background-color: #f1eeeb;
   color: #222;
   border: none;
@@ -77,11 +94,30 @@
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.menuButton:hover, 
 .evaluateButton:hover,
 .back:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
+
+.saveButton {
+  margin-top: 10px;
+  padding: 7px 17px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.saveButton:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
 
 @media (max-width: 768px) {
   .contentWrapper {
@@ -156,7 +192,7 @@
 
 .reasonCard {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px 15px;
+  padding: 7px 10px;
   border-radius: 8px;
   font-size: 0.9rem;
   color: #f1eeeb;

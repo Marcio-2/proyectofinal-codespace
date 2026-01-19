@@ -9,7 +9,7 @@ const getRoutines = async (req, res) => {
       id: routine._id,
       name: routine.name,
       exercises: routine.exercises,
-      evaluation: routine.evaluation,
+      difficulty: routine.difficulty,
       createdAt: routine.createdAt,
       updatedAt: routine.updatedAt,
     }));
@@ -59,7 +59,8 @@ const getRoutineById = async (req, res) => {
 // CREATE ROUTINE
 const createRoutine = async (req, res) => {
   try {
-    const { name, exercises, evaluation } = req.body;
+      console.log("difficulty recibido:", req.body.difficulty);
+    const { name, exercises,  difficulty } = req.body;
 
     if (!name || !exercises || exercises.length === 0) {
       return res.status(400).json({
@@ -72,7 +73,7 @@ const createRoutine = async (req, res) => {
     const newRoutine = new routineModel({
       name,
       exercises,
-      evaluation,
+      difficulty,
     });
 
     await newRoutine.save();

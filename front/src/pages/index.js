@@ -9,14 +9,19 @@ import ExerciseDetailsComponent from "../components/ExerciseDetails/ExerciseDeta
 import ContactForm from "../components/Contact/ContactForm";
 import WarmUpComponent from "../components/WarmUp/WarmUpComponent";
 import RoutinesTopComponent from "@/components/RoutinesTop/RoutinesTopComponent";
+import CreateRoutine from "@/components/CreateRoutine/CreateRoutine";
+import { RoutineList } from "@/components/RoutineList/RoutineList";
+import { RoutineDetails } from "@/components/RoutineDetails/RoutineDetails";
 
 import { getAllExercises, getExercise } from "../api/exerciseFetch";
-import CreateRoutine from "@/components/CreateRoutine/CreateRoutine";
+import { getAllRoutines, deleteRoutine } from "@/api/routineFetch";
 
 export default function App() {
   const [view, setView] = useState(""); // "", "list", "detail", "contact", etc.
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [routines, setRoutines] = useState([]);
+  const [selectedRoutine, setSelectedRoutine] = useState(null);
 
   const dispatch = useDispatch();
   const exercises = useSelector((state) => state.exerciseList.exercises);
@@ -45,8 +50,26 @@ export default function App() {
     }
   };
 
+  const loadRoutines = async () => {
+    try {
+      const res = await getAllRoutines();
+      const routinesArray = Array.isArray(res.data) ? res.data : [];
+      console.log("RUTINAS CARGADAS 👉", routinesArray); // para verificar
+      setRoutines(routinesArray);
+    } catch (err) {
+      console.error("Error loading routines:", err);
+      setRoutines([]);
+    }
+  };
+
   useEffect(() => {
     if (view === "list") loadExercises();
+  }, [view]);
+
+  useEffect(() => {
+    if (view === "routines") {
+      loadRoutines();
+    }
   }, [view]);
 
   // -------------------- Handlers --------------------
@@ -68,6 +91,21 @@ export default function App() {
   const handleBackToList = () => {
     dispatch(setSelectedExercise(null));
     setView("list");
+  };
+
+  const handleViewRoutine = (routine) => {
+    setSelectedRoutine(routine); 
+    setView("routineDetail"); 
+  };
+
+  const handleDeleteRoutine = async (id) => {
+    try {
+      await deleteRoutine(id);
+      setRoutines((prev) => prev.filter((r) => r.id !== id));
+    } catch (err) {
+      console.error("Error deleting routine:", err);
+      alert("Could not delete routine");
+    }
   };
 
   // -------------------- Render --------------------
@@ -105,11 +143,31 @@ export default function App() {
       )}
 
       {/* Create routine */}
-      {view === "create" &&  (
+      {view === "create" && (
         <CreateRoutine
-        exercises={exercises}
-        error={error}
-        onBack={handleBackToMenu}
+          exercises={exercises}
+          error={error}
+          onNavigate={setView}
+        />
+      )}
+
+      {/* Lista de rutinas */}
+      {view === "routines" && (
+        <RoutineList
+          routines={routines}
+          onView={handleViewRoutine} 
+          onDelete={handleDeleteRoutine}
+          onBack={() => setView("create")}
+          onBackToMenu={handleBackToMenu}
+        />
+      )}
+      
+      {/* Detalles de la rutina */}
+      {view === "routineDetail" && selectedRoutine && (
+        <RoutineDetails
+          routine={selectedRoutine}
+          onBack={() => setView("routines")}
+          onBackToMenu={handleBackToMenu}
         />
       )}
 

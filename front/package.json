@@ -15,5 +15,6 @@
     "react-redux": "^9.2.0",
     "redux": "^5.0.1",
     "yup": "^1.7.1"
-  }
+  },
+  "proxy": "http://localhost:9000"
 }

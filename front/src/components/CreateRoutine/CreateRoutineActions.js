@@ -22,3 +22,7 @@ export const setRoutineEvaluation = (evaluation) => ({
   type: "EVALUATE_ROUTINE",
   payload: evaluation
 });
+
+export const resetRoutine = () => ({
+  type: "RESET_ROUTINE"
+});
