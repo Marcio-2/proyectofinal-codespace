@@ -1,40 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Final Project: MF learn to train - Fullstack Fitness App
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Project Setup](#project-setup)
+- [Load Initial Exercises](#load-initial-exercises)
+- [Technologies Used](#technologies-used)
+- [Project Created By](#project-created-by)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+MF learn to train is a fullstack web application focused on fitness routines and exercises.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+It allows users to create their own workout routines and learn to train independently, without relying on personal trainers.  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+The app includes a complete authentication system and user management, with a modern frontend and a REST API backend connected to MongoDB.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+### Authentication & User Management
+- User registration with encrypted passwords
+- Login system using JWT
+- Protected routes for authenticated users
+- Profile creation with photo upload
+- Logout functionality
 
-To learn more about Next.js, take a look at the following resources:
+### Exercises & Routines
+- Choose different exercises
+- Create, edit, and delete routines
+- View routine details with sets, reps, and rest
+- Warm-up and Top Routines sections with external resources
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Setup
+- Backend:
+ - cd back
+ - npm install
+ - npm run start
 
-## Deploy on Vercel
+The backend runs on http://localhost:9000.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Frontend:
+ - cd front
+ - npm install
+ - npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+The frontend runs on http://localhost:3000 and communicates with the backend through a proxy.
+
+## Load-initial-exercises
+
+- The base exercises are located in back/src/mocks/exercisesDB.js. To load them into your MongoDB database:
+- Uncomment the loadData route in exercisesRoutes.js:
+// exercisesRouter.get('/loadData', loadData)
+- It should look like: 
+exercisesRouter.get('/loadData',loadData)
+- Start the backend (npm run start) and open in your browser:
+http://localhost:9000/exercises/loadData
+- This will populate the database with the initial exercises.
+You only need to do this once. Afterward, you can comment the line again to prevent loading duplicates.
+
+## Technologies Used
+
+- Frontend:
+ - Next.js
+ - React
+ - Redux
+ - React Redux
+ - Formik
+ - Yup
+ - JavaScript
+
+- Backend:
+ - Node.js
+ - Express.js
+ - MongoDB
+ - Mongoose
+ - JWT (jsonwebtoken)
+ - bcryptjs
+ - Multer
+ - CORS
+ - dotenv
+
+## Project created by
+
+Marcio Elliott Temoche (ATR 12)
+[GitHub](https://github.com/Marcio-2/proyectofinal-codespace.git)

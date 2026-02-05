@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllExercises } from "@/api/exerciseFetch";
-import { saveRoutine } from "@/api/routineFetch";
+import { saveRoutine, updateRoutine } from "@/api/routineFetch";
 import { fetchExercisesSuccess } from "../ExerciseList/ExerciseListActions";
-import { resetRoutine } from "./CreateRoutineActions";
 import {
+  resetRoutine,
   setRoutineName,
   addExercise,
   removeExercise,
@@ -13,65 +13,93 @@ import {
 import { evaluateRoutine as evalRoutine } from "./RoutineEvaluator";
 import {
   ExerciseSelector,
-  AddExercise,
+  RemoveExercise,
   CalificationRoutine,
 } from "./CreateRoutineComponent";
 import styles from "./CreateRoutine.module.css";
 
-export default function CreateRoutine({ onNavigate }) {
+export default function CreateRoutine({
+  onNavigate,
+  mode = "create",
+  routineData = null,
+}) {
   const dispatch = useDispatch();
   const routine = useSelector((state) => state.createRoutine);
-  const allExercises = useSelector((state) => state.exerciseList.exercises);
+  const exercisesList = useSelector((state) => state.exerciseList.exercises);
   const [nameError, setNameError] = useState(false);
+  const [saveError, setSaveError] = useState(null);
+
+  const isEditMode = mode === "edit";
 
   useEffect(() => {
-    const loadExercises = async () => {
-      if (!allExercises || allExercises.length === 0) {
-        try {
-          const res = await getAllExercises();
-          dispatch(fetchExercisesSuccess(res));
-        } catch (error) {
-          console.error("Error loading exercises:", error);
-        }
-      }
-    };
-    loadExercises();
-  }, [allExercises, dispatch]);
+    if (!exercisesList || exercisesList.length === 0) {
+      getAllExercises()
+        .then((res) => dispatch(fetchExercisesSuccess(res)))
+        .catch((err) => console.error("Error loading exercises:", err));
+    }
+  }, [exercisesList, dispatch]);
 
+  // Precargar rutina (al editar rutina)
   useEffect(() => {
-  if (routine.exercises.length === 0) {
-    dispatch(setRoutineEvaluation(null)); 
-  }
-}, [routine.exercises, dispatch]);
+    if (
+      !isEditMode ||
+      !routineData ||
+      !exercisesList ||
+      exercisesList.length === 0
+    )
+      return;
 
+    dispatch(resetRoutine());
+    dispatch(setRoutineName(routineData.name));
+
+    const loadedExercises = routineData.exercises.map((ex, index) => {
+      const fullEx =
+        exercisesList.find((e) => e.id === ex.id) ||
+        exercisesList.find((e) => e.name === ex.name);
+      return fullEx
+        ? { ...fullEx, ...ex, id: fullEx.id }
+        : { ...ex, id: ex.id || `tmp-${index}` };
+    });
+
+    loadedExercises.forEach((ex) => dispatch(addExercise(ex)));
+
+    if (routineData.difficulty) {
+      dispatch(setRoutineEvaluation({ difficulty: routineData.difficulty }));
+    }
+  }, [isEditMode, routineData, exercisesList, dispatch]);
+
+  //Handlers
   const handleAddExercise = (exercise) => dispatch(addExercise(exercise));
   const handleRemoveExercise = (id) => dispatch(removeExercise(id));
   const handleEvaluate = () =>
-   dispatch(setRoutineEvaluation(evalRoutine(routine.exercises)));
+    dispatch(setRoutineEvaluation(evalRoutine(routine.exercises)));
+
   const handleSaveRoutine = async () => {
-    if (!routine.routineName) {
-      setNameError(true);
+    if (!routine.routineName) return setNameError(true);
+    if (routine.exercises.length === 0) return;
+
+    let evaluation = routine.evaluation || evalRoutine(routine.exercises);
+    dispatch(setRoutineEvaluation(evaluation));
+
+    const payload = {
+      name: routine.routineName,
+      exercises: routine.exercises,
+      difficulty: evaluation.difficulty,
+    };
+
+    const result = isEditMode
+      ? await updateRoutine({ ...payload, id: routineData.id })
+      : await saveRoutine(payload);
+
+    if (!result.ok) {
+      setSaveError(result.error);
       return;
     }
-    if (routine.exercises.length === 0) {
-      return;
-    }
-   let evaluation = routine.evaluation;
-  if (!evaluation) {
-    evaluation = evalRoutine(routine.exercises);
-    dispatch(setRoutineEvaluation(evaluation)); 
-  }
-    try {
-     await saveRoutine({
-        name: routine.routineName,
-        exercises: routine.exercises,
-        difficulty: evaluation.difficulty,
-      });
-      dispatch(resetRoutine());
-      setNameError(false);
-    } catch (error) {
-      console.error("Error saving routine:", error);
-    }
+
+    dispatch(resetRoutine());
+    setNameError(false);
+    setSaveError(null);
+    onNavigate("routines");
   };
 
   if (!routine) return <p>Loading routine...</p>;
@@ -79,7 +107,10 @@ export default function CreateRoutine({ onNavigate }) {
   return (
     <div className={styles.background}>
       <div className={styles.container}>
-        <h2>Create Routine</h2>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.title}>{isEditMode ? "Edit Routine" : "Create Routine"}</h2>
+          <div className={styles.line}></div>
+        </div>
 
         <div className={styles.contentWrapper}>
           <div className={styles.leftColumn}>
@@ -92,25 +123,24 @@ export default function CreateRoutine({ onNavigate }) {
 
             <input
               type="text"
-              placeholder={
-                nameError ? " Name is required!" : "Routine name.."
-              }
+              placeholder={nameError ? "Name is required!" : "Routine name..."}
               value={routine.routineName}
               onChange={(e) => {
                 dispatch(setRoutineName(e.target.value));
                 if (nameError) setNameError(false);
               }}
-              className={`${styles.input} ${
-                nameError ? styles.inputError : ""
-              }`}
+              className={`${styles.input} ${nameError ? styles.inputError : ""}`}
             />
+
             <ExerciseSelector
-              exercises={allExercises || []}
+              exercises={exercisesList || []}
               onAdd={handleAddExercise}
+              selectedExercises={routine.exercises || []}
             />
+
             <h4>Added exercises:</h4>
             {routine.exercises?.map((e) => (
-              <AddExercise
+              <RemoveExercise
                 key={e.id}
                 exercise={e}
                 onRemove={handleRemoveExercise}
@@ -132,16 +162,17 @@ export default function CreateRoutine({ onNavigate }) {
             <button
               onClick={handleSaveRoutine}
               className={styles.saveButton}
-              disabled={routine.exercises.length === 0 }
-              
+              disabled={routine.exercises.length === 0}
             >
-              Save Routine
+              {isEditMode ? "Update Routine" : "Save Routine"}
             </button>
+            {/* Mensaje de error al guardar rutina */}
+            {saveError && <p className={styles.errorText}>{saveError}</p>}
           </div>
         </div>
 
         <button onClick={() => onNavigate("")} className={styles.back}>
-          Menú
+          Menu
         </button>
       </div>
     </div>

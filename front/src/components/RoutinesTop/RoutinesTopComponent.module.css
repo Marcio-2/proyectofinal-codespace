@@ -25,7 +25,6 @@
   gap: 40px; 
 }
 
-/* Columna izquierda: lista */
 .textColumn {
   flex: 1;
 }
@@ -57,7 +56,7 @@
 }
 
 .listLink {
-  margin: 16px 12px;
+  margin: 14px 12px;
 }
 
 .link {
@@ -68,10 +67,9 @@
 }
 
 .link:hover {
-  opacity: 0.3;
+  opacity: 0.7;
   transform: scale(1.02);
 }
-
 
 .back {
   margin-top: 40px;
@@ -91,26 +89,8 @@
   transform: scale(1.05);
 }
 
-/* 
-.back {
-  margin-top: 120px;
-  cursor: pointer;
-  font-weight: bold;
-  text-align: center;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.back:hover {
-  opacity: 1;
-  transform: scale(1.05);
-} */
-
 @media (max-width: 768px) {
   .contentWrapper {
     flex-direction: column;
-  }
-
-  .imageColumn {
-    margin-top: 20px;
   }
 }

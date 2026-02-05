@@ -1,11 +1,10 @@
 const exercisesDB = require("../mocks/exercisesDB");
-const exerciseModel = require("../models/Exercise");
+const Exercise = require("../models/Exercise");
 
-//GET ALL EXERCISES
 const getExercises = async (req, res) => {
   try {
-    const allExercises = await exerciseModel.find();
-    const resExercise = allExercises.map((exercise) => {
+    const exercises = await Exercise.find();
+    const exerciseRes = exercises.map((exercise) => {
       return {
         id: exercise.id,
         name: exercise.name,
@@ -17,8 +16,8 @@ const getExercises = async (req, res) => {
       };
     });
     res.status(200).json({
-      status: "succeded",
-      data: resExercise,
+      status: "succeeded",
+      data: exerciseRes,
       error: null,
     });
   } catch (error) {
@@ -28,14 +27,12 @@ const getExercises = async (req, res) => {
   }
 };
 
-//GET EXERCISE BY ID
 const getExerciseById = async (req, res) => {
   try {
     const id = req.params.id;
-    const exercise = await exerciseModel.findById(id);
-    console.log(exercise);
+    const exercise = await Exercise.findById(id);
     res.status(200).json({
-      status: "succeded",
+      status: "succeeded",
       data: exercise,
       error: null,
     });
@@ -48,11 +45,11 @@ const getExerciseById = async (req, res) => {
 
 const createExercise = async (req, res) => {
   try {
-    const newExercise = new exerciseModel(req.body);
+    const newExercise = new Exercise(req.body);
     await newExercise.save();
 
     res.status(200).json({
-      status: "succeded",
+      status: "succeeded",
       data: newExercise,
       error: null,
     });
@@ -69,7 +66,7 @@ const updateExercise = async (req, res) => {
   try {
     const id = req.params.id;
 
-    const updatedExercise = await exerciseModel.findByIdAndUpdate(
+    const updatedExercise = await Exercise.findByIdAndUpdate(
       id,
       req.body,
       { new: true }
@@ -82,7 +79,6 @@ const updateExercise = async (req, res) => {
         error: "The exercise doesnt exist",
       });
     }
-
     res.status(200).json({
       status: "succeeded",
       data: updatedExercise,
@@ -100,9 +96,9 @@ const updateExercise = async (req, res) => {
 const deleteExercise = async (req, res) => {
   try {
     const id = req.params.id;
-    await exerciseModel.findByIdAndDelete(id);
+    await Exercise.findByIdAndDelete(id);
     res.status(200).json({
-      status: "succeded",
+      status: "succeeded",
       data: null,
       error: null,
     });
@@ -114,11 +110,10 @@ const deleteExercise = async (req, res) => {
   }
 };
 
-//Load initial data
 const loadData = async (req, res) => {
   try {
-    const upsertPromises = exercisesDB.map(async (exercise) => {
-      await exerciseModel.updateOne(
+    const exerciseUpserts = exercisesDB.map(async (exercise) => {
+      await Exercise.updateOne(
         { name: exercise.name },
         {
           $set: {
@@ -137,7 +132,7 @@ const loadData = async (req, res) => {
       );
     });
 
-    await Promise.all(upsertPromises);
+    await Promise.all(exerciseUpserts);
 
     console.log("✅ Exercises loaded successfully (upsert)!");
     res

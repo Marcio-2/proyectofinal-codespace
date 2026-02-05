@@ -1,34 +1,127 @@
-export const saveRoutine = async (routine) => {
+export const getAllRoutines = async () => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No token found. User not logged in.");
+  }
+
   const response = await fetch("http://localhost:9000/routines", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(routine)
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
   });
 
-  const text = await response.text();
   let data;
   try {
-    data = JSON.parse(text);
+    data = await response.json();
   } catch {
     throw new Error("Backend returned non-JSON response");
   }
   if (!response.ok) {
-    throw new Error(data.message || "Failed to save routine");
+    throw new Error(data.error || "Failed to fetch routines");
   }
   return data;
 };
 
-export const getAllRoutines = async () => {
-  const res = await fetch("http://localhost:9000/routines");
-  if (!res.ok) throw new Error("Error fetching routines");
-  return res.json();
+export const saveRoutine = async (routine) => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return {
+      ok: false,
+      error: "Session expired. Please log in again.",
+    };
+  }
+
+  const response = await fetch("http://localhost:9000/routines", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(routine),
+  });
+
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    return { ok: false, error: "Backend returned non-JSON response" };
+  }
+
+  if (!response.ok) {
+    return {
+      ok: false,
+      error:
+        data.message ||
+        data.error ||
+        "Failed to save routine",
+    };
+  }
+
+  return { ok: true, data };
+};
+
+export const updateRoutine = async (routine) => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return { ok: false, error: "Session expired. Please log in again." };
+  }
+
+  const response = await fetch(
+    `http://localhost:9000/routines/${routine.id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(routine),
+    }
+  );
+
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    return { ok: false, error: "Backend returned non-JSON response" };
+  }
+
+  if (!response.ok) {
+    return {
+      ok: false,
+      error:
+        data.message ||
+        data.error ||
+        "Failed to update routine",
+    };
+  }
+
+  return { ok: true, data };
 };
 
 
 export const deleteRoutine = async (id) => {
-  const res = await fetch(`http://localhost:9000/routines/${id}`, {
-    method: "DELETE"
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No token found. User not logged in.");
+  }
+
+  const response = await fetch(`http://localhost:9000/routines/${id}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) throw new Error("Failed to delete routine");
-  return res.json(); 
+
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    data = {};
+  }
+  if (!response.ok) {
+    throw new Error(data.error || "Failed to delete routine");
+  }
+  return data;
 };
+
+
+

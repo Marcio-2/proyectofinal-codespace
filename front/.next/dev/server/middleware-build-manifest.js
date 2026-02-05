@@ -1,16 +1,16 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
     "/": [
-      "static/chunks/[root-of-the-server]__f7c6f476._.js",
+      "static/chunks/[root-of-the-server]__5a06e55d._.js",
       "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
       "static/chunks/node_modules_next_dist_shared_lib_82dc2e9d._.js",
       "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
       "static/chunks/node_modules_next_dist_6024eba3._.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_37969559._.js",
-      "static/chunks/src_components_b818d14a._.css",
+      "static/chunks/src_components_ba532e98._.css",
       "static/chunks/src_pages_index_2da965e7._.js",
-      "static/chunks/turbopack-src_pages_index_2a673da7._.js"
+      "static/chunks/turbopack-src_pages_index_514859e1._.js"
     ],
     "/_app": [
       "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
@@ -19,10 +19,10 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_next_dist_6024eba3._.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
       "static/chunks/node_modules_e12f7408._.js",
-      "static/chunks/[root-of-the-server]__54680dab._.js",
+      "static/chunks/[root-of-the-server]__050da714._.js",
       "static/chunks/src_styles_globals_5bb75e7e.css",
       "static/chunks/src_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-src_pages__app_fa40bf77._.js"
+      "static/chunks/turbopack-src_pages__app_6afec772._.js"
     ]
   },
   "devFiles": [],

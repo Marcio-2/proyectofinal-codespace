@@ -1,13 +1,15 @@
-.mainMenuContainer {
+.background {
   position: relative;
   min-height: 100vh;
   width: 100%;
   background-image: url("/images/main-background.webp");
   background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
+  background-position: top center; 
+  background-repeat: no-repeat;
   color: #f1eeeb;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .horizontalMenu {
@@ -15,38 +17,75 @@
   top: 12px;
   left: 20px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: 11px;
   background-color: rgba(51, 51, 51, 0.577);
   padding: 5px 20px;
   border-radius: 8px;
+  z-index: 2;
 }
 
 .menuItem {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 8px;
   background: none;
   border: none;
   color: #f1eeeb;
   cursor: pointer;
-  padding: 8px 8px;
+  padding: 8px;
 }
 
 .menuIcon {
   width: 28px;
   height: 28px;
-  margin: 0; 
-  filter: invert(96%) sepia(6%) saturate(0%) hue-rotate(0deg)
-  brightness(97%) contrast(96%);
+  filter: invert(96%) sepia(6%) saturate(0%) hue-rotate(0deg) brightness(97%)
+    contrast(96%);
 }
+
+.userButtons {
+  position: absolute;
+  top: 23px; 
+  right: 23px; 
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.loginButton,
+.logoutButton {
+  background: #f1eeeb;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.profileButton,
+.registerButton {
+  background: rgba(51, 51, 51, 0.577);
+  border: 1px solid #f1eeeb;
+  color: #f1eeeb;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.loginButton,
+.registerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 
 .titleCompany {
   position: absolute;
-  top: 80px;
-  right: 40px;
+  top: 100px;
+  right: 50px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -57,7 +96,6 @@
 .titleCompany h1 {
   font-size: 3rem;
   margin: 0;
-  line-height: 1.1;
 }
 
 .titleCompany h2 {
@@ -68,4 +106,46 @@
 }
 
 
+@media (max-width: 768px) {
+  .horizontalMenu {
+    justify-content: center; 
+    gap: 6px; 
+    padding: 5px 10px; 
+  }
 
+  .menuItem {
+    padding: 6px 8px; 
+    font-size: 0.75rem;
+  }
+  .titleCompany {
+    right: 20px; 
+  }
+  .titleCompany h1 {
+    font-size: 2rem; 
+  }
+
+  .titleCompany h2 {
+    font-size: 0.9rem;
+  }
+
+  .userButtons {
+    top: auto;
+    right: auto;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    width: auto;
+  }
+
+  .loginButton,
+  .registerButton {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+
+  .menuIcon {
+    width: 24px;
+    height: 24px;
+  }
+}

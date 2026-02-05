@@ -6,8 +6,6 @@ export default function WarmUpComponent({ onBack }) {
     <div className={styles.background}>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          
-          {/* Columna izquierda: texto */}
           <div className={styles.textColumn}>
             <div className={styles.titleContainer}>
               <h1 className={styles.title}>Warm Up</h1>
@@ -22,7 +20,7 @@ export default function WarmUpComponent({ onBack }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  UPPER BODY MOBILITY
+                  Upper body mobility
                 </a>
               </li>
               <li className={styles.listLink}>
@@ -32,7 +30,7 @@ export default function WarmUpComponent({ onBack }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  LOWER BODY MOBILITY
+                  Lower body mobility
                 </a>
               </li>
               <li className={styles.listLink}>
@@ -42,7 +40,7 @@ export default function WarmUpComponent({ onBack }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  UPPER BODY WARM-UP
+                  Upper body warm-up
                 </a>
               </li>
               <li className={styles.listLink}>
@@ -52,14 +50,13 @@ export default function WarmUpComponent({ onBack }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  LOWER BODY WARM-UP
+                  Lower body warm-up
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Columna derecha: imagen + texto debajo */}
-          <div className={styles.imageStrech}>
+          <div className={styles.imageStretch}>
             <img
               src="/images/streching.webp"
               alt="Warm Up"
@@ -71,10 +68,9 @@ export default function WarmUpComponent({ onBack }) {
           </div>
         </div>
 
-        {/* Back button */}
-        <div className={styles.back} onClick={onBack}>
+        <button className={styles.back} onClick={onBack}>
           Menu
-        </div>
+        </button>
       </div>
     </div>
   );

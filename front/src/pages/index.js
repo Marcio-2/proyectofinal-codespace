@@ -12,22 +12,24 @@ import RoutinesTopComponent from "@/components/RoutinesTop/RoutinesTopComponent"
 import CreateRoutine from "@/components/CreateRoutine/CreateRoutine";
 import { RoutineList } from "@/components/RoutineList/RoutineList";
 import { RoutineDetails } from "@/components/RoutineDetails/RoutineDetails";
+import Login from "../components/Register/Login";
+import Profile from "@/components/Profile/Profile";
+import Register from "../components/Register/Register";
 
 import { getAllExercises, getExercise } from "../api/exerciseFetch";
 import { getAllRoutines, deleteRoutine } from "@/api/routineFetch";
 
 export default function App() {
-  const [view, setView] = useState(""); // "", "list", "detail", "contact", etc.
+  const [view, setView] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [routines, setRoutines] = useState([]);
   const [selectedRoutine, setSelectedRoutine] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const dispatch = useDispatch();
   const exercises = useSelector((state) => state.exerciseList.exercises);
-  const selectedExercise = useSelector(
-    (state) => state.exerciseDetails.selectedExercise
-  );
+  const selectedExercise = useSelector((state) => state.exerciseDetails.selectedExercise);
 
   // -------------------- Cargar ejercicios --------------------
   const loadExercises = async () => {
@@ -35,15 +37,10 @@ export default function App() {
     setError(null);
     try {
       const res = await getAllExercises();
-      const exercisesArray = Array.isArray(res)
-        ? res
-        : Array.isArray(res.data)
-        ? res.data
-        : [];
+      const exercisesArray = Array.isArray(res) ? res : Array.isArray(res.data) ? res.data : [];
       dispatch(fetchExercisesSuccess(exercisesArray));
-    } catch (err) {
-      console.error(err);
-      setError("No se pudieron cargar los ejercicios");
+    } catch {
+      setError("Exercises couldn't be loaded");
       dispatch(fetchExercisesSuccess([]));
     } finally {
       setLoading(false);
@@ -54,10 +51,8 @@ export default function App() {
     try {
       const res = await getAllRoutines();
       const routinesArray = Array.isArray(res.data) ? res.data : [];
-      console.log("RUTINAS CARGADAS 👉", routinesArray); // para verificar
       setRoutines(routinesArray);
-    } catch (err) {
-      console.error("Error loading routines:", err);
+    } catch {
       setRoutines([]);
     }
   };
@@ -67,19 +62,39 @@ export default function App() {
   }, [view]);
 
   useEffect(() => {
-    if (view === "routines") {
-      loadRoutines();
-    }
+    if (view === "routines") loadRoutines();
   }, [view]);
+
+  // -------------------- Login / Logout --------------------
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
+
+  useEffect(() => {
+    if (view === "create" && !isLoggedIn) setView("login");
+  }, [view, isLoggedIn]);
+
+  const handleLogin = (nextView) => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+    setView(token ? nextView || "" : "login");
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    setView("");
+  };
 
   // -------------------- Handlers --------------------
   const handleShowDetail = async (id) => {
     try {
-      const fullExercise = await getExercise(id); // fetch del ejercicio completo
+      const fullExercise = await getExercise(id);
       dispatch(setSelectedExercise(fullExercise));
-      setView("detail"); // cambiar a vista detalle
+      setView("detail");
     } catch (err) {
-      console.error("Error cargando ejercicio:", err);
+      console.error("Error loading exercise:", err);
     }
   };
 
@@ -94,87 +109,74 @@ export default function App() {
   };
 
   const handleViewRoutine = (routine) => {
-    setSelectedRoutine(routine); 
-    setView("routineDetail"); 
+    setSelectedRoutine(routine);
+    setView("routineDetail");
   };
 
   const handleDeleteRoutine = async (id) => {
     try {
       await deleteRoutine(id);
       setRoutines((prev) => prev.filter((r) => r.id !== id));
-    } catch (err) {
-      console.error("Error deleting routine:", err);
+    } catch {
       alert("Could not delete routine");
     }
+  };
+
+  const handleEditRoutine = (routine) => {
+    setSelectedRoutine(routine);
+    setView("edit");
   };
 
   // -------------------- Render --------------------
   return (
     <div>
-      {/* Menú principal */}
-      {view === "" && <MainMenuComponent onSelectView={setView} />}
-
-      {/* Contact */}
+      {view === "" && <MainMenuComponent onSelectView={setView} onLogout={handleLogout} isLoggedIn={isLoggedIn} />}
+      {view === "login" && <Login onLogin={(nextView) => handleLogin(nextView || "create")} onNavigate={setView} />}
+      {view === "profile" && isLoggedIn && <Profile onNavigate={setView} onBack={handleBackToMenu} />}
+      {view === "register" && <Register onNavigate={setView} />}
       {view === "contact" && <ContactForm onBack={handleBackToMenu} />}
-
-      {/* Warm-up */}
       {view === "warmup" && <WarmUpComponent onBack={handleBackToMenu} />}
-
-      {/* Lista de ejercicios */}
       {view === "list" && (
         <ExerciseListComponent
           exercises={exercises}
           loading={loading}
           error={error}
-          handleShowDetail={handleShowDetail} // pasa solo el id
+          handleShowDetail={handleShowDetail}
           onBack={handleBackToMenu}
         />
       )}
-
-      {/* Detalle del ejercicio */}
       {view === "detail" && selectedExercise && (
-        <>
-          {console.log("selectedExercise:", selectedExercise)}
-          <ExerciseDetailsComponent
-            exercise={selectedExercise}
-            onBack={handleBackToList}
-          />
-        </>
+        <ExerciseDetailsComponent exercise={selectedExercise} onBack={handleBackToList} />
       )}
-
-      {/* Create routine */}
-      {view === "create" && (
-        <CreateRoutine
-          exercises={exercises}
-          error={error}
-          onNavigate={setView}
-        />
-      )}
-
-      {/* Lista de rutinas */}
+      {view === "create" && <CreateRoutine exercises={exercises} error={error} onNavigate={setView} />}
       {view === "routines" && (
         <RoutineList
           routines={routines}
-          onView={handleViewRoutine} 
+          onView={handleViewRoutine}
           onDelete={handleDeleteRoutine}
           onBack={() => setView("create")}
           onBackToMenu={handleBackToMenu}
+          isLoggedIn={isLoggedIn}
         />
       )}
-      
-      {/* Detalles de la rutina */}
       {view === "routineDetail" && selectedRoutine && (
         <RoutineDetails
           routine={selectedRoutine}
+          onEdit={handleEditRoutine}
           onBack={() => setView("routines")}
           onBackToMenu={handleBackToMenu}
         />
       )}
-
-      {/* Routines-top */}
-      {view === "routinestop" && (
-        <RoutinesTopComponent onBack={handleBackToMenu} />
+      {view === "edit" && selectedRoutine && (
+        <CreateRoutine
+          exercises={exercises}
+          error={error}
+          onNavigate={setView}
+          routineData={selectedRoutine}
+          mode="edit"
+        />
       )}
+      {view === "routinestop" && <RoutinesTopComponent onBack={handleBackToMenu} />}
     </div>
   );
 }

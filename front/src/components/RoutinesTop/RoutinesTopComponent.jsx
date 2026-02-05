@@ -6,8 +6,6 @@ export default function RoutinesTopComponent({ onBack }) {
     <div className={styles.background}>
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
-          
-          {/* Columna izquierda: texto */}
           <div className={styles.textColumn}>
             <div className={styles.titleContainer}>
               <h1 className={styles.title}>Routines Top</h1>
@@ -79,10 +77,9 @@ export default function RoutinesTopComponent({ onBack }) {
           </div>
         </div>
 
-        {/* Back button */}
-        <div className={styles.back} onClick={onBack}>
+        <button className={styles.back} onClick={onBack}>
           Menu
-        </div>
+        </button>
       </div>
     </div>
   );

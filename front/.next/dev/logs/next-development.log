@@ -1,212 +1,257 @@
-[00:01:11.727] Server  LOG      ✓ Ready in 48.6s
-[00:01:14.784] Server  LOG      ○ Compiling / ...
-[00:02:00.009] Browser LOG     store iniciada
-[00:02:00.009] Browser LOG     store iniciada
-[00:02:00.897] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:02:02.268] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+[00:00:00.781] Server  LOG      ✓ Ready in 527ms
+[00:00:04.504] Browser LOG     store iniciada
+[00:00:06.555] Browser LOG     store iniciada
+[00:00:06.555] Browser LOG     store iniciada
+[00:00:10.710] Browser LOG     store iniciada
+[00:00:16.609] Browser LOG     store iniciada
+[00:00:17.848] Browser LOG     store iniciada
+[00:00:17.848] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
 
-Check the render method of `RoutineDetails`. 
-[00:02:03.682] Browser LOG     store iniciada
-[00:02:06.101] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:02:08.891] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:02:11.126] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:15:01.133] Server  LOG      ✓ Compiled in 125ms
-[00:27:11.622] Server  LOG      ✓ Compiled in 116ms
-[00:28:02.164] Browser LOG     store iniciada
-[00:28:02.831] Browser LOG     store iniciada
-[00:28:03.997] Browser LOG     store iniciada
-[00:28:14.582] Browser LOG     store iniciada
-[00:28:18.344] Browser LOG     store iniciada
-[00:28:18.683] Browser LOG     store iniciada
-[00:28:19.155] Browser LOG     store iniciada
-[00:28:19.759] Browser LOG     store iniciada
-[00:28:22.565] Browser LOG     Saving routine with difficulty: Medium
-[00:28:22.696] Browser LOG     store iniciada
-[00:28:24.751] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:29:00.798] Browser LOG     store iniciada
-[00:29:04.865] Browser LOG     store iniciada
-[00:29:05.630] Browser LOG     store iniciada
-[00:29:08.865] Browser LOG     store iniciada
-[00:29:11.165] Browser LOG     store iniciada
-[00:29:13.865] Browser LOG     store iniciada
-[00:29:17.365] Browser LOG     store iniciada
-[00:29:21.482] Browser LOG     store iniciada
-[00:29:27.233] Browser LOG     store iniciada
-[00:29:28.149] Browser LOG     store iniciada
-[00:29:29.599] Browser LOG     store iniciada
-[00:29:30.783] Browser LOG     store iniciada
-[00:29:39.699] Browser LOG     store iniciada
-[00:29:42.383] Browser LOG     store iniciada
-[00:29:50.793] Browser LOG     store iniciada
-[00:29:51.186] Browser LOG     store iniciada
-[00:29:51.186] Browser LOG     store iniciada
-[00:29:51.320] Browser LOG     store iniciada
-[00:29:51.572] Browser LOG     store iniciada
-[00:29:52.208] Browser LOG     store iniciada
-[00:29:52.208] Browser LOG     store iniciada
-[00:29:52.634] Browser LOG     store iniciada
-[00:29:52.634] Browser LOG     store iniciada
-[00:29:52.634] Browser LOG     store iniciada
-[00:29:52.785] Browser LOG     store iniciada
-[00:29:54.146] Browser LOG     store iniciada
-[00:29:57.150] Browser LOG     store iniciada
-[00:29:58.685] Browser LOG     Saving routine with difficulty: Medium
-[00:29:58.685] Browser LOG     store iniciada
-[00:30:01.066] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:30:19.564] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:30:32.301] Browser LOG     store iniciada
-[00:30:33.884] Browser LOG     store iniciada
-[00:30:37.100] Browser LOG     store iniciada
-[00:30:39.868] Browser LOG     store iniciada
-[00:30:41.617] Browser LOG     store iniciada
-[00:30:43.734] Browser LOG     store iniciada
-[00:30:46.134] Browser LOG     store iniciada
-[00:30:47.435] Browser LOG     store iniciada
-[00:30:49.450] Browser LOG     store iniciada
-[00:30:51.584] Browser LOG     store iniciada
-[00:30:55.967] Browser LOG     store iniciada
-[00:30:58.717] Browser LOG     store iniciada
-[00:31:01.918] Browser LOG     store iniciada
-[00:31:02.651] Browser LOG     store iniciada
-[00:31:03.918] Browser LOG     store iniciada
-[00:31:07.834] Browser LOG     store iniciada
-[00:31:10.117] Browser LOG     store iniciada
-[00:31:13.251] Browser LOG     store iniciada
-[00:31:16.134] Browser LOG     store iniciada
-[00:31:24.218] Browser LOG     store iniciada
-[00:31:25.201] Browser LOG     store iniciada
-[00:31:36.701] Browser LOG     store iniciada
-[00:31:42.785] Browser LOG     store iniciada
-[00:31:48.602] Browser LOG     store iniciada
-[00:31:52.719] Browser LOG     store iniciada
-[00:31:55.319] Browser LOG     store iniciada
-[00:31:56.784] Browser LOG     store iniciada
-[00:32:04.985] Browser LOG     store iniciada
-[00:32:07.318] Browser LOG     store iniciada
-[00:32:10.536] Browser LOG     store iniciada
-[00:32:17.536] Browser LOG     store iniciada
-[00:32:24.636] Browser LOG     store iniciada
-[00:32:26.818] Browser LOG     store iniciada
-[00:32:30.402] Browser LOG     store iniciada
-[00:32:31.102] Browser LOG     store iniciada
-[00:32:31.469] Browser LOG     store iniciada
-[00:32:32.302] Browser LOG     store iniciada
-[00:32:33.088] Browser LOG     store iniciada
-[00:32:34.620] Browser LOG     store iniciada
-[00:32:36.253] Browser LOG     store iniciada
-[00:32:38.537] Browser LOG     store iniciada
-[00:32:40.152] Browser LOG     store iniciada
-[00:32:42.969] Browser LOG     store iniciada
-[00:32:47.339] Browser LOG     store iniciada
-[00:32:47.591] Browser LOG     store iniciada
-[00:32:47.781] Browser LOG     store iniciada
-[00:32:51.062] Browser LOG     Saving routine with difficulty: Easy
-[00:32:51.062] Browser LOG     store iniciada
-[00:32:52.938] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:35:48.911] Server  LOG      ✓ Compiled in 20ms
-[00:35:56.787] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[00:35:58.441] Browser LOG     store iniciada
-[00:36:01.373] Browser LOG     store iniciada
-[00:36:01.841] Browser LOG     store iniciada
-[00:36:08.125] Browser LOG     store iniciada
-[00:40:47.722] Server  LOG      ✓ Compiled in 23ms
-[00:40:56.147] Browser LOG     store iniciada
-[00:40:58.779] Browser LOG     store iniciada
-[00:41:06.497] Browser LOG     store iniciada
-[00:41:12.563] Browser LOG     store iniciada
-[00:41:13.580] Browser LOG     store iniciada
-[00:41:14.129] Browser LOG     store iniciada
-[00:41:14.730] Browser LOG     store iniciada
-[00:43:21.869] Server  LOG      ✓ Compiled in 31ms
-[00:43:22.598] Browser LOG     store iniciada
-[00:43:34.575] Browser LOG     store iniciada
-[00:43:34.575] Browser LOG     store iniciada
-[00:43:35.141] Browser LOG     store iniciada
-[00:43:35.142] Browser LOG     store iniciada
-[00:43:39.612] Browser LOG     store iniciada
-[00:43:39.612] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
-[00:43:41.976] Browser LOG     store iniciada
-[00:43:41.976] Browser LOG     store iniciada
-[00:43:43.108] Browser LOG     store iniciada
-[00:43:43.108] Browser LOG     store iniciada
-[00:43:47.058] Browser LOG     store iniciada
-[00:43:47.058] Browser LOG     store iniciada
-[00:44:20.251] Server  LOG      ✓ Compiled in 11ms
-[00:44:23.906] Browser LOG     store iniciada
-[00:44:23.906] Browser LOG     store iniciada
-[00:44:25.500] Browser LOG     store iniciada
-[00:44:26.334] Browser LOG     store iniciada
-[00:44:35.017] Browser LOG     store iniciada
-[00:44:35.901] Browser LOG     store iniciada
-[00:44:38.251] Browser LOG     store iniciada
-[00:44:41.637] Browser LOG     store iniciada
-[00:44:41.923] Browser LOG     store iniciada
-[00:44:42.122] Browser LOG     store iniciada
-[00:44:42.303] Browser LOG     store iniciada
-[00:44:44.062] Browser LOG     store iniciada
-[00:44:44.062] Browser LOG     store iniciada
-[00:44:45.730] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[04:32:32.546] Server  LOG      ✓ Compiled in 112ms
-[04:32:35.953] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[04:32:38.024] Browser LOG     store iniciada
-[04:32:39.238] Browser LOG     store iniciada
-[04:32:39.238] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
-[04:32:42.778] Browser LOG     store iniciada
-[04:32:43.624] Browser LOG     store iniciada
-[04:32:44.925] Browser LOG     store iniciada
-[04:32:47.493] Browser LOG     store iniciada
-[04:32:49.024] Browser LOG     store iniciada
-[04:32:57.125] Browser LOG     store iniciada
-[04:32:57.253] Browser LOG     store iniciada
-[04:32:57.432] Browser LOG     store iniciada
-[04:32:57.605] Browser LOG     store iniciada
-[04:32:57.787] Browser LOG     store iniciada
-[04:32:57.958] Browser LOG     store iniciada
-[04:32:58.110] Browser LOG     store iniciada
-[04:33:01.543] Browser LOG     store iniciada
-[04:33:03.859] Browser LOG     store iniciada
-[04:33:05.826] Browser LOG     store iniciada
-[04:33:06.659] Browser LOG     store iniciada
-[04:33:11.449] Browser LOG     store iniciada
-[04:33:11.618] Browser LOG     store iniciada
-[04:33:45.661] Server  LOG      ✓ Compiled in 13ms
-[04:33:56.561] Browser LOG     store iniciada
-[04:34:03.145] Browser LOG     store iniciada
-[04:34:03.145] Browser LOG     store iniciada
-[04:34:04.851] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[04:34:07.977] Browser LOG     store iniciada
-[04:34:09.137] Browser LOG     store iniciada
-[04:34:09.137] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
-[04:34:10.438] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"},{"createdAt":"2026-01-19T15:24:19.192Z","difficulty":"Medium","exercises":[{"_id":"696e4ca3e85eb03a28e3e359","level":"Intermediate","muscle":"Shoulders","name":"Battle Ropes","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35a","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35b","level":"Intermediate","muscle":"Quadriceps","name":"Box Jumps","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35c","level":"Intermediate","muscle":"Glutes","name":"Hip Thrust","reps":10,"rest":60,"sets":3},{"_id":"696e4ca3e85eb03a28e3e35d","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696e4ca3e85eb03a28e3e358","name":"hard routine","updatedAt":"2026-01-19T15:24:19.192Z"},{"createdAt":"2026-01-19T15:22:43.181Z","difficulty":"Medium","exercises":[{"_id":"696e4c43e85eb03a28e3e345","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e346","level":"Intermediate","muscle":"Shoulders","name":"Military Press","reps":10,"rest":60,"sets":3},{"_id":"696e4c43e85eb03a28e3e347","level":"Intermediate","muscle":"Back","name":"Barbell Row","reps":10,"rest":60,"sets":3}],"id":"696e4c43e85eb03a28e3e344","name":"ru","updatedAt":"2026-01-19T15:22:43.181Z"},{"createdAt":"2026-01-17T17:44:36.169Z","difficulty":"medium","exercises":[{"_id":"696bca846a3597e3e57c3f2f","level":"Advanced","muscle":"Quadriceps","name":"Barbell Squat","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f30","level":"Intermediate","muscle":"Glutes","name":"Kettlebell Swings","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f31","level":"Intermediate","muscle":"Legs","name":"Sprints","reps":10,"rest":60,"sets":3},{"_id":"696bca846a3597e3e57c3f32","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bca846a3597e3e57c3f2e","name":"rutina top","updatedAt":"2026-01-17T17:44:36.169Z"},{"createdAt":"2026-01-17T17:37:22.577Z","difficulty":"medium","exercises":[{"_id":"696bc8d26a3597e3e57c3f00","level":"Advanced","muscle":"Chest","name":"Box Jump Burpees","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f01","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f02","level":"Intermediate","muscle":"Chest","name":"Bench Press","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f03","level":"Intermediate","muscle":"Back","name":"Pull-Ups","reps":10,"rest":60,"sets":3},{"_id":"696bc8d26a3597e3e57c3f04","level":"Intermediate","muscle":"Triceps","name":"Dips","reps":10,"rest":60,"sets":3}],"id":"696bc8d26a3597e3e57c3eff","name":"232","updatedAt":"2026-01-17T17:37:22.577Z"},{"createdAt":"2026-01-17T17:31:57.607Z","difficulty":"medium","exercises":[{"_id":"696bc78d6a3597e3e57c3ef9","level":"Intermediate","muscle":"Glutes","name":"Lunges","reps":10,"rest":60,"sets":3},{"_id":"696bc78d6a3597e3e57c3efa","level":"Advanced","muscle":"Chest","name":"Burpees","reps":10,"rest":60,"sets":3}],"id":"696bc78d6a3597e3e57c3ef8","name":"hola","updatedAt":"2026-01-17T17:31:57.607Z"}]
-[04:34:16.486] Browser LOG     store iniciada
-[04:34:16.486] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
-[04:38:14.329] Server  LOG      ✓ Compiled in 41ms
-[04:38:19.016] Browser LOG     store iniciada
-[04:38:19.950] Browser LOG     store iniciada
-[04:38:21.349] Browser LOG     store iniciada
-[04:38:22.965] Browser LOG     store iniciada
-[04:38:26.082] Browser LOG     store iniciada
-[04:38:32.882] Browser LOG     store iniciada
-[04:38:33.382] Browser LOG     store iniciada
-[04:38:33.824] Browser LOG     store iniciada
-[04:38:33.824] Browser LOG     store iniciada
-[04:38:34.483] Browser LOG     store iniciada
-[04:38:36.000] Browser LOG     store iniciada
-[04:38:37.083] Browser LOG     store iniciada
-[04:38:38.815] Browser LOG     store iniciada
-[04:38:39.733] Browser LOG     store iniciada
-[04:38:44.455] Browser LOG     store iniciada
-[04:38:44.693] Browser LOG     store iniciada
-[04:38:45.095] Browser LOG     store iniciada
-[04:38:45.631] Browser LOG     store iniciada
-[04:38:45.817] Browser LOG     store iniciada
-[04:38:48.364] Browser LOG     store iniciada
-[04:38:48.364] Browser LOG     store iniciada
-[04:38:48.364] Browser LOG     store iniciada
-[04:38:50.204] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:33:08.598Z","difficulty":"Easy","exercises":[{"_id":"696e86f4e85eb03a28e3e446","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e447","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e448","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e86f4e85eb03a28e3e445","name":"facil","updatedAt":"2026-01-19T19:33:08.598Z"},{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"}]
-[04:38:56.231] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:33:08.598Z","difficulty":"Easy","exercises":[{"_id":"696e86f4e85eb03a28e3e446","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e447","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e448","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e86f4e85eb03a28e3e445","name":"facil","updatedAt":"2026-01-19T19:33:08.598Z"},{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"}]
-[04:38:58.127] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:33:08.598Z","difficulty":"Easy","exercises":[{"_id":"696e86f4e85eb03a28e3e446","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e447","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e448","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e86f4e85eb03a28e3e445","name":"facil","updatedAt":"2026-01-19T19:33:08.598Z"},{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"}]
-[04:38:59.706] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:33:08.598Z","difficulty":"Easy","exercises":[{"_id":"696e86f4e85eb03a28e3e446","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e447","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e448","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e86f4e85eb03a28e3e445","name":"facil","updatedAt":"2026-01-19T19:33:08.598Z"},{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"}]
-[04:39:01.522] Browser LOG     RUTINAS CARGADAS 👉 [{"createdAt":"2026-01-19T19:33:08.598Z","difficulty":"Easy","exercises":[{"_id":"696e86f4e85eb03a28e3e446","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e447","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e86f4e85eb03a28e3e448","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e86f4e85eb03a28e3e445","name":"facil","updatedAt":"2026-01-19T19:33:08.598Z"},{"createdAt":"2026-01-19T19:28:23.369Z","difficulty":"Easy","exercises":[{"_id":"696e85d7e85eb03a28e3e3f1","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f2","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e85d7e85eb03a28e3e3f3","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e85d7e85eb03a28e3e3f0","name":"holaaaa","updatedAt":"2026-01-19T19:28:23.369Z"},{"createdAt":"2026-01-19T15:39:04.537Z","difficulty":"Medium","exercises":[{"_id":"696e5018e85eb03a28e3e3bb","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3},{"_id":"696e5018e85eb03a28e3e3bc","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3}],"id":"696e5018e85eb03a28e3e3ba","name":"easy","updatedAt":"2026-01-19T15:39:04.537Z"},{"createdAt":"2026-01-19T15:27:11.557Z","difficulty":"Easy","exercises":[{"_id":"696e4d4fe85eb03a28e3e388","level":"Easy","muscle":"Quadriceps","name":"Leg Press","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e389","level":"Easy","muscle":"Triceps","name":"Triceps Cable Extension","reps":10,"rest":60,"sets":3},{"_id":"696e4d4fe85eb03a28e3e38a","level":"Easy","muscle":"Legs","name":"Jump Rope","reps":10,"rest":60,"sets":3}],"id":"696e4d4fe85eb03a28e3e387","name":"eas","updatedAt":"2026-01-19T15:27:11.557Z"}]
-[04:39:02.600] Browser LOG     store iniciada
-[04:46:07.957] Server  LOG      ✓ Compiled in 22ms
+Check the render method of `ExerciseListComponent`. 
+[00:00:19.089] Browser LOG     store iniciada
+[00:00:28.167] Browser LOG     store iniciada
+[00:00:28.167] Browser LOG     store iniciada
+[00:00:30.293] Browser LOG     store iniciada
+[00:00:32.035] Browser LOG     store iniciada
+[00:00:34.358] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:42.838] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:00:44.126] Browser LOG     store iniciada
+[00:00:44.543] Browser LOG     store iniciada
+[00:00:46.245] Browser LOG     store iniciada
+[00:00:46.760] Browser LOG     store iniciada
+[00:00:48.344] Browser LOG     store iniciada
+[00:00:48.504] Browser LOG     store iniciada
+[00:00:58.914] Browser LOG     store iniciada
+[00:25:13.178] Server  LOG      ✓ Compiled in 132ms
+[00:25:15.717] Server  LOG      ✓ Compiled in 13ms
+[00:25:21.275] Browser LOG     store iniciada
+[00:25:21.275] Browser LOG     store iniciada
+[00:25:29.958] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:34.050] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:25:51.828] Browser LOG     store iniciada
+[00:25:54.111] Browser LOG     store iniciada
+[00:25:55.228] Browser LOG     store iniciada
+[00:25:55.862] Browser LOG     store iniciada
+[00:25:57.594] Browser LOG     store iniciada
+[00:25:58.612] Browser LOG     store iniciada
+[00:26:00.010] Browser LOG     store iniciada
+[00:26:00.762] Browser LOG     store iniciada
+[00:26:03.428] Browser LOG     store iniciada
+[00:26:05.695] Browser LOG     store iniciada
+[00:26:05.817] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:13.703] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:14.845] Browser LOG     store iniciada
+[00:26:16.446] Browser LOG     store iniciada
+[00:26:18.977] Browser LOG     store iniciada
+[00:26:19.107] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:26:24.384] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:29:52.501] Server  LOG      ✓ Compiled in 82ms
+[00:30:28.275] Server  LOG      ✓ Compiled in 22ms
+[00:32:37.250] Server  LOG      ✓ Compiled in 23ms
+[00:32:47.155] Browser LOG     store iniciada
+[00:32:49.436] Browser LOG     store iniciada
+[00:32:50.138] Browser LOG     store iniciada
+[00:32:51.304] Browser LOG     store iniciada
+[00:32:58.166] Server  LOG      ✓ Compiled in 29ms
+[00:33:00.037] Browser LOG     store iniciada
+[00:33:04.104] Browser LOG     store iniciada
+[00:33:07.821] Browser LOG     store iniciada
+[00:36:53.529] Server  LOG      ✓ Compiled in 35ms
+[00:36:58.266] Browser LOG     store iniciada
+[00:36:59.772] Browser LOG     store iniciada
+[00:36:59.772] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:06.689] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:09.811] Browser LOG     store iniciada
+[00:37:11.359] Browser LOG     store iniciada
+[00:37:14.877] Browser LOG     store iniciada
+[00:37:14.994] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:18.204] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:21.159] Browser LOG     store iniciada
+[00:37:22.477] Browser LOG     store iniciada
+[00:37:25.328] Browser LOG     store iniciada
+[00:37:26.561] Browser LOG     store iniciada
+[00:37:26.674] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:29.421] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:36.878] Browser LOG     store iniciada
+[00:37:37.809] Browser LOG     store iniciada
+[00:37:38.493] Browser LOG     store iniciada
+[00:37:43.511] Browser LOG     store iniciada
+[00:37:45.010] Browser LOG     store iniciada
+[00:37:46.493] Browser LOG     store iniciada
+[00:37:46.603] Browser LOG     store iniciada
+[00:37:50.071] Browser LOG     store iniciada
+[00:37:50.071] Browser LOG     store iniciada
+[00:37:50.071] Browser LOG     store iniciada
+[00:37:50.071] Browser LOG     store iniciada
+[00:37:50.071] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:50.071] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:50.071] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:50.071] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:37:52.544] Browser LOG     store iniciada
+[00:37:54.694] Browser LOG     store iniciada
+[00:37:55.878] Browser LOG     store iniciada
+[00:37:56.778] Browser LOG     store iniciada
+[00:37:56.908] Browser LOG     store iniciada
+[00:37:59.827] Browser LOG     store iniciada
+[00:38:09.759] Server  LOG      ✓ Compiled in 33ms
+[00:38:14.583] Browser LOG     store iniciada
+[00:38:14.583] Browser LOG     store iniciada
+[00:38:14.583] Browser LOG     store iniciada
+[00:38:14.583] Browser LOG     store iniciada
+[00:38:14.583] Browser LOG     store iniciada
+[00:38:14.583] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:14.583] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:14.583] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:14.583] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:14.583] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:16.644] Browser LOG     store iniciada
+[00:38:17.176] Browser LOG     store iniciada
+[00:38:18.195] Browser LOG     store iniciada
+[00:38:19.961] Browser LOG     store iniciada
+[00:38:20.077] Browser LOG     store iniciada
+[00:38:23.595] Browser LOG     store iniciada
+[00:38:25.961] Browser LOG     store iniciada
+[00:38:25.961] Browser LOG     store iniciada
+[00:38:34.138] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:38.424] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:38:42.279] Browser LOG     store iniciada
+[00:38:46.595] Browser LOG     store iniciada
+[00:38:50.344] Browser LOG     store iniciada
+[00:38:50.463] Browser LOG     store iniciada
+[00:39:15.250] Server  LOG      ✓ Compiled in 22ms
+[00:39:43.780] Browser LOG     store iniciada
+[00:39:49.023] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:49.024] Browser LOG     [2;38;2;124;124;124m%s[0m store iniciada
+[00:39:51.046] Browser LOG     store iniciada
+[00:39:53.812] Browser LOG     store iniciada
+[00:40:01.047] Browser LOG     store iniciada
+[00:40:01.163] Browser LOG     store iniciada
+[00:40:04.380] Browser LOG     store iniciada

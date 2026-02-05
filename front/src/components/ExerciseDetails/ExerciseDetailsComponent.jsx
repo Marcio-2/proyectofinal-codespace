@@ -12,20 +12,23 @@ export default function ExerciseDetailsComponent({ exercise, onBack }) {
           {/* Columna izquierda: texto */}
           <div className={styles.textColumn}>
             <div className={styles.titleContainer}>
-              <h1 className={styles.title}>{exercise.name} | {exercise.muscle}</h1>
+              <h1 className={styles.title}>
+                {exercise.name} | {exercise.muscle}
+              </h1>
             </div>
 
-            {/* Description */}
-            {exercise.description && (
-              <div>
-                <h3>DESCRIPTION</h3>
-                <p className={styles.description}>{exercise.description}</p>
-              </div>
-            )}
-
-            {/* Video link */}
-            {exercise.videoUrl && (
-              <p>
+            <div className={styles.details}>
+              {/* Description */}
+              {exercise.description && (
+                <div>
+                  <h3>DESCRIPTION</h3>
+                  <p className={styles.description}>
+                    {exercise.description}
+                  </p>
+                </div>
+              )}
+              {/* Video link */}
+              {exercise.videoUrl && (
                 <a
                   href={exercise.videoUrl}
                   target="_blank"
@@ -34,29 +37,34 @@ export default function ExerciseDetailsComponent({ exercise, onBack }) {
                 >
                   VIDEO
                 </a>
-              </p>
-            )}
-
-            {/* Alternatives */}
-            {exercise.alternatives?.length > 0 && (
-              <div>
-                <h3>EXERCISES ALTERNATIVES</h3>
-                <div className={styles.alternativesExercises}>
-                  {exercise.alternatives.map((alt, index) => (
-                    <div key={index} className={styles.alternativesImages}>
-                      {alt.imageUrl && (
-                        <img
-                          src={alt.imageUrl}
-                          alt={alt.name}
-                          className={styles.alternativeImageSmall}
-                        />
-                      )}
-                      <span className={styles.alternativeName}>{alt.name}</span>
-                    </div>
-                  ))}
+              )}
+              {/* Alternatives */}
+              {exercise.alternatives?.length > 0 && (
+                <div>
+                  <h3>EXERCISES ALTERNATIVES</h3>
+                  <div className={styles.alternativesExercises}>
+                    {exercise.alternatives.map((alt, index) => (
+                      <div
+                        key={index}
+                        className={styles.alternativesImages}
+                      >
+                        {alt.imageUrl && (
+                          <img
+                            src={alt.imageUrl}
+                            alt={alt.name}
+                            className={styles.alternativeImageSmall}
+                          />
+                        )}
+                        <span className={styles.alternativeName}>
+                          {alt.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+
+            </div>
           </div>
         </div>
 

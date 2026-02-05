@@ -1,19 +1,17 @@
 import React from "react";
 import styles from "./RoutineList.module.css";
 
-const RoutineOptions = ({ routine, onView, onDelete }) => (
+const RoutineOptions = ({ routine, onView, onDelete, isLoggedIn }) => (
   <li className={styles.routineOption}>
     <span className={styles.routineName}>{routine.name}</span>
     <div className={styles.buttonsRoutine}>
-      <button
-        className={styles.viewButton}
-        onClick={() => onView(routine)}
-      >
+      <button className={styles.viewButton} onClick={() => onView(routine)} disabled={!isLoggedIn}>
         View
       </button>
       <button
         className={styles.deleteButton}
         onClick={() => onDelete(routine.id)}
+        disabled={!isLoggedIn} 
       >
         Delete
       </button>
@@ -21,14 +19,21 @@ const RoutineOptions = ({ routine, onView, onDelete }) => (
   </li>
 );
 
-export const RoutineList = ({ routines, onView, onDelete, onBack, onBackToMenu }) => {
+export const RoutineList = ({
+  routines,
+  onView,
+  onDelete,
+  onBack,
+  onBackToMenu,
+  isLoggedIn,
+}) => {
   const hasRoutines = Array.isArray(routines) && routines.length > 0;
   return (
     <div className={styles.background}>
       <div className={styles.container}>
         <h3 className={styles.title}>Your routines</h3>
 
-       {hasRoutines ? (
+        {hasRoutines ? (
           <ul className={styles.list}>
             {routines.map((routine) => (
               <RoutineOptions
@@ -36,6 +41,7 @@ export const RoutineList = ({ routines, onView, onDelete, onBack, onBackToMenu }
                 routine={routine}
                 onView={onView}
                 onDelete={onDelete}
+                isLoggedIn={isLoggedIn}
               />
             ))}
           </ul>

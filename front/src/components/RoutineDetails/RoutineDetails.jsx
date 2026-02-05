@@ -3,11 +3,11 @@ import styles from "./RoutineDetails.module.css";
 
 const ExerciseItem = ({ exercise }) => (
   <li className={styles.exerciseItem}>
-    {exercise.name}: {exercise.sets}x{exercise.reps}  {exercise.rest}"
+    {exercise.name}: {exercise.sets}x{exercise.reps} {exercise.rest}"
   </li>
 );
 
-export const RoutineDetails = ({ routine, onBack, onBackToMenu }) => {
+export const RoutineDetails = ({ routine, onEdit, onBack, onBackToMenu }) => {
   if (!routine) return <p>Loading routine...</p>;
 
   return (
@@ -31,6 +31,9 @@ export const RoutineDetails = ({ routine, onBack, onBackToMenu }) => {
         </div>
 
         <div className={styles.back}>
+          <button className={styles.editButton} onClick={() => onEdit(routine)}>
+            Edit 
+          </button>
           <button className={styles.menuButton} onClick={onBackToMenu}>
             Menu
           </button>

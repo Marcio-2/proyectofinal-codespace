@@ -1,5 +1,4 @@
 export const getAllExercises = async () => {
-    //Peticion al back
     const response = await fetch('http://localhost:9000/exercises')
     const exercises = await response.json()
     return exercises.data
@@ -7,7 +6,6 @@ export const getAllExercises = async () => {
 
 
 export const getExercise = async (id) => {
-    //Peticion al back
     const response = await fetch('http://localhost:9000/exercises/'+id)
     const exercises = await response.json()
     return exercises.data
@@ -44,7 +42,7 @@ export const updateExercise = async (id, bodyParam) => {
 
 
 export const createExercise = async (bodyParam) => {
-  console.log("📦 bodyParam enviado al backend:", bodyParam);
+  console.log("bodyParam enviado al backend:", bodyParam);
   try {
     const response = await fetch('http://localhost:9000/exercises/', {
       method: "POST",
