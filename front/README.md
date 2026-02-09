@@ -36,14 +36,14 @@ The app includes a complete authentication system and user management, with a mo
 
 ## Project Setup
 - Backend:
- - cd back
+ - cd fullstack/back
  - npm install
  - npm run start
 
 The backend runs on http://localhost:9000.
 
 - Frontend:
- - cd front
+ - cd fullstack/front
  - npm install
  - npm run dev
 
