@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/marcio/Documents/Marcio%20DW/PROYECTO%20FINAL/fullstack/front/src/styles/globals.css"],"sourcesContent":["html, body {\n  padding: 0;\n  margin: 0;\n  width: 100%;\n  height: 100%;\n}\n"],"names":[],"mappings":"AAAA"}}]
-}
