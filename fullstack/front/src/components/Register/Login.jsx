@@ -12,9 +12,19 @@ export default function Login({ onNavigate, onLogin }) {
     setFormData((prev) => ({ ...prev, [target.name]: target.value }));
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
+
+    if (!validateEmail(formData.email)) {
+      setError("Invalid email format. Example: 'name@email.com'");
+      return;
+    }
 
     try {
       const res = await fetch("http://localhost:9000/users/login", {

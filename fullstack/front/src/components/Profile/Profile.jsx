@@ -40,10 +40,20 @@ export default function Profile({ onNavigate }) {
     fetchUser();
   }, [token, dispatch]);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleUpdate = async () => {
     if (!token) return;
     setError("");
     setSuccess("");
+
+    if (!validateEmail(email)) {
+      setError("Invalid email format. Example: 'name@email.com'");
+      return;
+    }
 
     try {
       const formData = new FormData();

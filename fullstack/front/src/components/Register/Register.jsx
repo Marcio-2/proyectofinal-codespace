@@ -24,11 +24,22 @@ export default function Register({ onNavigate }) {
     }
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setSuccess("");
     setLoading(true);
+
+    if (!validateEmail(registerData.email)) {
+      setError("Invalid email format. 'Example: name@email.com'");
+      setLoading(false);
+      return;
+    }
 
     const formData = new FormData();
     formData.append("username", registerData.username);
@@ -55,7 +66,7 @@ export default function Register({ onNavigate }) {
       console.error(err);
       setError("Server error. Try again later.");
     } finally {
-       setLoading(false);
+      setLoading(false);
     }
   };
 
@@ -64,13 +75,13 @@ export default function Register({ onNavigate }) {
       <div className={styles.container}>
         <h3 className={styles.title}>Create user</h3>
 
-        <form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit}
+          autoComplete="off"
+        >
           <label>Username</label>
-          <input
-            name="username"
-            onChange={handleChange}
-            required
-          />
+          <input name="username" onChange={handleChange} required />
 
           <label>Email</label>
           <input
