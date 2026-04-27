@@ -35,6 +35,7 @@ The app includes a complete authentication system and user management, with a mo
 
 
 ## Project Setup
+Make sure MongoDB is running before starting the backend.
 - Backend:
  - cd fullstack/back
  - npm install
@@ -49,7 +50,23 @@ The backend runs on http://localhost:9000.
 
 The frontend runs on http://localhost:3000 and communicates with the backend through a proxy.
 
-## Load-initial-exercises
+## Environment Variables
+This project requires environment variables to run properly.
+
+You must create a .env file inside the /back folder with the following content:
+
+JWT_SECRET=your_secret_key_here
+
+This variable is used to sign and verify authentication tokens (JWT).
+
+⚠️ Important:
+
+The .env file is not included in the repository for security reasons.
+You must create it manually before starting the backend.
+
+Optionally, you can rename the provided .env.example file to .env and update its values.
+
+## Load initial exercises
 
 - The base exercises are located in back/src/mocks/exercisesDB.js. To load them into your MongoDB database:
 - Uncomment the loadData route in exercisesRoutes.js:
