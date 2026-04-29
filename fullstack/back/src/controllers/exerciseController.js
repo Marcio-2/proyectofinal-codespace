@@ -48,7 +48,7 @@ const createExercise = async (req, res) => {
     const newExercise = new Exercise(req.body);
     await newExercise.save();
 
-    res.status(200).json({
+    res.status(201).json({
       status: "succeeded",
       data: newExercise,
       error: null,
@@ -128,13 +128,11 @@ const loadData = async (req, res) => {
             })),
           },
         },
-        { upsert: true } // si no existe, crea uno nuevo
+        { upsert: true } // evita duplicados y mantiene consistencia de datos
       );
     });
 
     await Promise.all(exerciseUpserts);
-
-    console.log("✅ Exercises loaded successfully (upsert)!");
     res
       .status(200)
       .json({ status: "succeeded", data: exercisesDB, error: null });

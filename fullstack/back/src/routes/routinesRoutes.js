@@ -9,11 +9,12 @@ const verifyToken = require('../middleware/verifyToken');
 
 const routinesRouter = require('express').Router();
 
-routinesRouter.get('/', verifyToken, getRoutines);
+routinesRouter.use(verifyToken);
 
-routinesRouter.post('/', verifyToken, createRoutine);
-routinesRouter.get('/:id', verifyToken, getRoutineById);
-routinesRouter.put('/:id', verifyToken, updateRoutine);
-routinesRouter.delete('/:id', verifyToken, deleteRoutine);
+routinesRouter.get('/', getRoutines);
+routinesRouter.post('/', createRoutine);
+routinesRouter.get('/:id', getRoutineById);
+routinesRouter.put('/:id', updateRoutine);
+routinesRouter.delete('/:id', deleteRoutine);
 
 module.exports = routinesRouter;

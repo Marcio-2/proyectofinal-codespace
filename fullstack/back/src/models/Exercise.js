@@ -23,9 +23,11 @@ const exerciseSchema = new Schema({
   },
   description: {
     type: String,
+    default: "",
   },
   videoUrl: {
     type: String,
+    default: "",
   },
   alternatives: [alternativeSchema],
 });
