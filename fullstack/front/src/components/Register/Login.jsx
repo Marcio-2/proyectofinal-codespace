@@ -95,7 +95,7 @@ export default function Login({ onNavigate, onLogin }) {
           </div>
 
           <div className={styles.menuLink}>
-            <button type="button" onClick={() => onNavigate("")}>
+            <button type="button" onClick={() => onNavigate("menu")}>
               Back to menu
             </button>
           </div>

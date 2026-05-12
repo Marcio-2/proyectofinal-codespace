@@ -13,13 +13,18 @@ export default function ContactForm({onBack}) {
         <p className={styles.companyMotto}>
           Our main goal is for you to learn how to structure your routine and become your own coach
         </p>
-        <p className={styles.backMenu} onClick={onBack} >
+        <p>
           www.mf.com
         </p>
         <p className={styles.contactInfo}>
           contact us:<br />
           Marcio Elliott | 643 078 777
         </p>
+
+        {/* Back button */}
+        <div className={styles.backMenu} onClick={onBack}>
+          Back 
+        </div>
       </div>
     </div>
   );

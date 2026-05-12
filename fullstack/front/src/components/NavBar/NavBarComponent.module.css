@@ -1,0 +1,50 @@
+.horizontalMenu {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  background-color: rgba(51, 51, 51, 0.577);
+  padding: 5px 20px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #f1eeeb;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menuIcon {
+  width: 28px;
+  height: 28px;
+  filter: invert(96%) sepia(6%) saturate(0%) hue-rotate(0deg) brightness(97%)
+    contrast(96%);
+}
+
+
+@media (max-width: 768px) {
+  .horizontalMenu {
+    justify-content: center; 
+    gap: 6px; 
+    padding: 5px 10px; 
+  }
+
+  .menuItem {
+    padding: 6px 8px; 
+    font-size: 0.75rem;
+  }
+
+  .menuIcon {
+    width: 24px;
+    height: 24px;
+  }
+}

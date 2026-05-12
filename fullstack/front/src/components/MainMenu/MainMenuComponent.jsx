@@ -9,49 +9,6 @@ export default function MainMenuComponent({
   return (
     <div className={styles.background}>
       <div className={styles.container}>
-        <nav className={styles.horizontalMenu}>
-          <img
-            src="/icons/fitness.svg"
-            alt="Principal"
-            className={styles.menuIcon}
-          />
-
-          <button
-            onClick={() => onSelectView("contact")}
-            className={styles.menuItem}
-          >
-            What is MF?
-          </button>
-
-          <button
-            onClick={() => onSelectView("warmup")}
-            className={styles.menuItem}
-          >
-            Warm up
-          </button>
-
-          <button
-            onClick={() => onSelectView("list")}
-            className={styles.menuItem}
-          >
-            Exercises
-          </button>
-
-          <button
-            onClick={() => onSelectView("create")}
-            className={styles.menuItem}
-          >
-            Create routine
-          </button>
-
-          <button
-            onClick={() => onSelectView("routinestop")}
-            className={styles.menuItem}
-          >
-            Top routines
-          </button>
-        </nav>
-
         <div className={styles.userButtons}>
           {isLoggedIn ? (
             <>

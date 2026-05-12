@@ -4,6 +4,7 @@ import { fetchExercisesSuccess } from "@/components/ExerciseList/ExerciseListAct
 import { setSelectedExercise } from "@/components/ExerciseDetails/ExerciseDetailsActions";
 
 import MainMenuComponent from "../components/MainMenu/MainMenuComponent";
+import NavBarComponent from "@/components/NavBar/NavBarComponent";
 import ExerciseListComponent from "../components/ExerciseList/ExerciseListComponent";
 import ExerciseDetailsComponent from "../components/ExerciseDetails/ExerciseDetailsComponent";
 import ContactForm from "../components/Contact/ContactForm";
@@ -20,7 +21,7 @@ import { getAllExercises, getExercise } from "../api/exerciseFetch";
 import { getAllRoutines, deleteRoutine } from "@/api/routineFetch";
 
 export default function App() {
-  const [view, setView] = useState("");
+  const [view, setView] = useState("menu");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [routines, setRoutines] = useState([]);
@@ -29,7 +30,9 @@ export default function App() {
 
   const dispatch = useDispatch();
   const exercises = useSelector((state) => state.exerciseList.exercises);
-  const selectedExercise = useSelector((state) => state.exerciseDetails.selectedExercise);
+  const selectedExercise = useSelector(
+    (state) => state.exerciseDetails.selectedExercise,
+  );
 
   // -------------------- Cargar ejercicios --------------------
   const loadExercises = async () => {
@@ -37,7 +40,11 @@ export default function App() {
     setError(null);
     try {
       const res = await getAllExercises();
-      const exercisesArray = Array.isArray(res) ? res : Array.isArray(res.data) ? res.data : [];
+      const exercisesArray = Array.isArray(res)
+        ? res
+        : Array.isArray(res.data)
+          ? res.data
+          : [];
       dispatch(fetchExercisesSuccess(exercisesArray));
     } catch {
       setError("Exercises couldn't be loaded");
@@ -67,8 +74,7 @@ export default function App() {
 
   // -------------------- Login / Logout --------------------
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
+    setIsLoggedIn(!!localStorage.getItem("token"));
   }, []);
 
   useEffect(() => {
@@ -84,7 +90,7 @@ export default function App() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
-    setView("");
+    setView("menu");
   };
 
   // -------------------- Handlers --------------------
@@ -100,7 +106,8 @@ export default function App() {
 
   const handleBackToMenu = () => {
     dispatch(setSelectedExercise(null));
-    setView("");
+    setSelectedRoutine(null);
+    setView("menu");
   };
 
   const handleBackToList = () => {
@@ -129,54 +136,100 @@ export default function App() {
 
   // -------------------- Render --------------------
   return (
-    <div>
-      {view === "" && <MainMenuComponent onSelectView={setView} onLogout={handleLogout} isLoggedIn={isLoggedIn} />}
-      {view === "login" && <Login onLogin={(nextView) => handleLogin(nextView || "create")} onNavigate={setView} />}
-      {view === "profile" && isLoggedIn && <Profile onNavigate={setView} onBack={handleBackToMenu} />}
-      {view === "register" && <Register onNavigate={setView} />}
-      {view === "contact" && <ContactForm onBack={handleBackToMenu} />}
-      {view === "warmup" && <WarmUpComponent onBack={handleBackToMenu} />}
-      {view === "list" && (
-        <ExerciseListComponent
-          exercises={exercises}
-          loading={loading}
-          error={error}
-          handleShowDetail={handleShowDetail}
-          onBack={handleBackToMenu}
-        />
-      )}
-      {view === "detail" && selectedExercise && (
-        <ExerciseDetailsComponent exercise={selectedExercise} onBack={handleBackToList} />
-      )}
-      {view === "create" && <CreateRoutine exercises={exercises} error={error} onNavigate={setView} />}
-      {view === "routines" && (
-        <RoutineList
-          routines={routines}
-          onView={handleViewRoutine}
-          onDelete={handleDeleteRoutine}
-          onBack={() => setView("create")}
-          onBackToMenu={handleBackToMenu}
-          isLoggedIn={isLoggedIn}
-        />
-      )}
-      {view === "routineDetail" && selectedRoutine && (
-        <RoutineDetails
-          routine={selectedRoutine}
-          onEdit={handleEditRoutine}
-          onBack={() => setView("routines")}
-          onBackToMenu={handleBackToMenu}
-        />
-      )}
-      {view === "edit" && selectedRoutine && (
-        <CreateRoutine
-          exercises={exercises}
-          error={error}
-          onNavigate={setView}
-          routineData={selectedRoutine}
-          mode="edit"
-        />
-      )}
-      {view === "routinestop" && <RoutinesTopComponent onBack={handleBackToMenu} />}
+    <div className="appBackground">
+      <NavBarComponent onSelectView={setView} />
+      <div
+        style={{
+          flex: 1,
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {view === "menu" && (
+          <MainMenuComponent
+            onSelectView={setView}
+            onLogout={handleLogout}
+            isLoggedIn={isLoggedIn}
+          />
+        )}
+
+        {view === "login" && (
+          <Login
+            onLogin={(nextView) => handleLogin(nextView || "create")}
+            onNavigate={setView}
+          />
+        )}
+
+        {view === "profile" && isLoggedIn && (
+          <Profile onNavigate={setView} onBack={handleBackToMenu} />
+        )}
+
+        {view === "register" && <Register onNavigate={setView} />}
+
+        {view === "contact" && <ContactForm onBack={handleBackToMenu} />}
+
+        {view === "warmup" && <WarmUpComponent onBack={handleBackToMenu} />}
+
+        {view === "list" && (
+          <ExerciseListComponent
+            exercises={exercises}
+            loading={loading}
+            error={error}
+            handleShowDetail={handleShowDetail}
+            onBack={handleBackToMenu}
+          />
+        )}
+
+        {view === "detail" && selectedExercise && (
+          <ExerciseDetailsComponent
+            exercise={selectedExercise}
+            onBack={handleBackToList}
+          />
+        )}
+
+        {view === "create" && (
+          <CreateRoutine
+            exercises={exercises}
+            error={error}
+            onNavigate={setView}
+          />
+        )}
+
+        {view === "routines" && (
+          <RoutineList
+            routines={routines}
+            onView={handleViewRoutine}
+            onDelete={handleDeleteRoutine}
+            onBack={() => setView("create")}
+            onBackToMenu={handleBackToMenu}
+            isLoggedIn={isLoggedIn}
+          />
+        )}
+
+        {view === "routineDetail" && selectedRoutine && (
+          <RoutineDetails
+            routine={selectedRoutine}
+            onEdit={handleEditRoutine}
+            onBack={() => setView("routines")}
+            onBackToMenu={handleBackToMenu}
+          />
+        )}
+
+        {view === "edit" && selectedRoutine && (
+          <CreateRoutine
+            exercises={exercises}
+            error={error}
+            onNavigate={setView}
+            routineData={selectedRoutine}
+            mode="edit"
+          />
+        )}
+
+        {view === "routinestop" && (
+          <RoutinesTopComponent onBack={handleBackToMenu} />
+        )}
+      </div>
     </div>
   );
 }

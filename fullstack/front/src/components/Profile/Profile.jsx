@@ -125,7 +125,7 @@ export default function Profile({ onNavigate }) {
           {error && <p className={styles.errorText}>{error}</p>}
 
           <div className={styles.menuLink}>
-            <button type="button" onClick={() => onNavigate("")}>
+            <button type="button" onClick={() => onNavigate("menu")}>
               Back to menu
             </button>
           </div>

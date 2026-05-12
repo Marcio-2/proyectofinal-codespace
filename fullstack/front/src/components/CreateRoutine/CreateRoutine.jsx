@@ -171,7 +171,7 @@ export default function CreateRoutine({
           </div>
         </div>
 
-        <button onClick={() => onNavigate("")} className={styles.back}>
+        <button onClick={() => onNavigate("menu")} className={styles.back}>
           Menu
         </button>
       </div>
