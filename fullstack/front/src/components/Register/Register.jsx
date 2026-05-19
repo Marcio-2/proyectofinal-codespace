@@ -58,10 +58,10 @@ export default function Register({ onNavigate }) {
         setError(data.error || "Register failed");
         return;
       }
-      setSuccess("User created successfully");
+      setSuccess("User created successfully. Redirecting to login...");
       setTimeout(() => {
         onNavigate("login");
-      }, 800);
+      }, 2000);
     } catch (err) {
       console.error(err);
       setError("Server error. Try again later.");
