@@ -108,7 +108,9 @@ export default function CreateRoutine({
     <div className={styles.background}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h2 className={styles.title}>{isEditMode ? "Edit Routine" : "Create Routine"}</h2>
+          <h2 className={styles.title}>
+            {isEditMode ? "Edit Routine" : "Create Routine"}
+          </h2>
           <div className={styles.line}></div>
         </div>
 
@@ -170,10 +172,6 @@ export default function CreateRoutine({
             {saveError && <p className={styles.errorText}>{saveError}</p>}
           </div>
         </div>
-
-        <button onClick={() => onNavigate("menu")} className={styles.back}>
-          Menu
-        </button>
       </div>
     </div>
   );

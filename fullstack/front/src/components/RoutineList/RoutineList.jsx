@@ -23,8 +23,8 @@ export const RoutineList = ({
   routines,
   onView,
   onDelete,
-  onBack,
-  onBackToMenu,
+  onCreateRoutine,
+  onGoProfile,
   isLoggedIn,
 }) => {
   const hasRoutines = Array.isArray(routines) && routines.length > 0;
@@ -50,11 +50,11 @@ export const RoutineList = ({
         )}
 
         <div className={styles.back}>
-          <button className={styles.menuButton} onClick={onBackToMenu}>
-            Menu
+          <button className={styles.menuButton} onClick={onGoProfile}>
+            Profile
           </button>
-          <button className={styles.backButton} onClick={onBack}>
-            Back to Create Routine
+          <button className={styles.backButton} onClick={onCreateRoutine}>
+            Create Routine
           </button>
         </div>
       </div>

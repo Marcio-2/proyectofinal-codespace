@@ -44,7 +44,6 @@ export default function Login({ onNavigate, onLogin }) {
       dispatch(setUser(data.data.user, data.data.token));
       onLogin("create");
     } catch (err) {
-      console.error("Login error:", err);
       setError("Server error. Try again later.");
     }
   };

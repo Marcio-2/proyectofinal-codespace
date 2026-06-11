@@ -109,6 +109,9 @@ export default function App() {
     setSelectedRoutine(null);
     setView("menu");
   };
+  const handleGoProfile = () => {
+    setView("profile");
+  };
 
   const handleBackToList = () => {
     dispatch(setSelectedExercise(null));
@@ -201,8 +204,8 @@ export default function App() {
             routines={routines}
             onView={handleViewRoutine}
             onDelete={handleDeleteRoutine}
-            onBack={() => setView("create")}
-            onBackToMenu={handleBackToMenu}
+            onCreateRoutine={() => setView("create")}
+            onGoProfile={handleGoProfile}
             isLoggedIn={isLoggedIn}
           />
         )}

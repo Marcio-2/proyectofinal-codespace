@@ -63,7 +63,6 @@ export default function Register({ onNavigate }) {
         onNavigate("login");
       }, 2000);
     } catch (err) {
-      console.error(err);
       setError("Server error. Try again later.");
     } finally {
       setLoading(false);
