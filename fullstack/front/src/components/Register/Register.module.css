@@ -1,6 +1,6 @@
 .background {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-image: url("/images/wallpaper.jpg");
   background-size: cover;
   background-position: center;
@@ -55,9 +55,9 @@
 }
 
 .mainButton {
-  margin-top: 10px;
+  margin-top: 2px;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: none;
   background-color: #296994;
   color: #fff;
@@ -114,9 +114,14 @@
 
 .errorText {
   margin-top: 6px;
-  font-size: 0.8rem;
-  color: #9d372c;
+  padding: 8px 12px;
+  background: rgba(130, 34, 24, 0.18);
+  border: 1px solid rgba(255, 120, 100, 0.45);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #f9624e;
   text-align: center;
+  backdrop-filter: blur(4px);
 }
 
 /* Register.jsx */
@@ -137,6 +142,3 @@
   color: #7bdcb5;
   text-align: center;
 }
-
-
-
